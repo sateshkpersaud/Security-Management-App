@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ISSA.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="description" content="" />
+    <title><%: Page.Title %> - Operations Management Application</title>
+    <link href="~/Images/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <%-- Bootstrap --%>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Style.css" rel="stylesheet" />
+    <%-- Bootstrap & Jquery Scripts--%>
+    <script src="../../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        //Code to show different alert messages
+        function ShowMessage(message, messagetype) {
+            var cssclass;
+            switch (messagetype) {
+                case 'Success':
+                    cssclass = 'alert-success'
+                    break;
+                case 'Error':
+                    cssclass = 'alert-danger'
+                    break;
+                case 'Warning':
+                    cssclass = 'alert-warning'
+                    break;
+                default:
+                    cssclass = 'alert-info'
+            }
+            $('#alert_container').append('<div id="alert_div" style="margin: 0 0.5%; -webkit-box-shadow: 3px 4px 6px #999;" class="alert fade in ' + cssclass + '"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>' + messagetype + '!</strong> <span>' + message + '</span></div>');
+
+            setTimeout(function () {
+                $("#alert_div").fadeTo(2000, 500).slideUp(500, function () {
+                    $("#alert_div").remove();
+                });
+            }, 5000);//5000=5 seconds
+        }
+    </script>
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server">
+        </asp:ScriptManager>
+        <%-- This function disables all buttons once clicked so as to prevent adding double entries --%>
+          <script type="text/javascript" lang="javascript">
+              var lastPostBackId = '';
+              var pageReqMan = Sys.WebForms.PageRequestManager.getInstance();
+              pageReqMan.add_initializeRequest(checkSubmitButton);
+
+              function checkSubmitButton(sender, args) {
+                  if (pageReqMan.get_isInAsyncPostBack() && args.get_postBackElement().id == lastPostBackId) {
+                      args.set_cancel(true);
+                  }
+                  else {
+                      lastPostBackId = args.get_postBackElement().id;
+                      args.get_postBackElement().setAttribute("disabled", "disabled");
+                  }
+              }
+    </script>
+            <%-- Banner --%>
+        <div class="banner">
+            <asp:Image runat="server" Height="50" src="../../Images/logo.png" ></asp:Image>
+            <asp:Image runat="server" Height="50" src="../../Images/name.png" ></asp:Image>
+        </div>
+        <div class="">
+            <%-- navigation bars based on roles --%>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./Index.html">
+                            <%--<img src="../../Images/logo.png" style="max-width: 100px; margin-top: -10px;" height="42" width="52" />--%>
+                            ISS
+                        </a>
+                    </div>
+
+
+                    <div class="collapse navbar-collapse" id="navigationbar">
+                        <%-- Default Authentication --%>
+                        <asp:Panel ID="pnlDefault" runat="server">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="../../Pages/Default.aspx">Home</a></li>
+                            </ul>
+                        </asp:Panel>
+
+                        <%-- Operators --%>
+                        <asp:Panel ID="pnlOperators" Visible="false" runat="server">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../../Pages/Operations/CallInAbsent.aspx">Call In Absent</a></li>
+                                <li><a href="../../Pages/Operations/Complaints.aspx">Complaints</a></li>
+                                <li><a href="../../Pages/Operations/DailyLog.aspx">Daily Log</a></li>
+                                <li><a href="../../Pages/Operations/Incidents.aspx">Incidents</a></li>
+                            </ul>
+                        </asp:Panel>
+
+                        <%-- Managers --%>
+                        <asp:Panel ID="pnlManagers" Visible="false" runat="server">
+                            <ul class="nav navbar-nav">
+
+                                <%-- managers dropdown --%>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">Managers
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="../../Pages/Managers/Alerts.aspx">Alerts</a></li>
+                                        <li><a href="../../Pages/Managers/Employees.aspx">Employees</a></li>
+                                        <li><a href="../../Pages/Managers/ReferenceData.aspx">Reference Data</a></li>
+                                        <li><a href="../../Pages/Managers/SpecialOperations.aspx">Special Operations</a></li>
+                                        <li><a href="../../Pages/Managers/WeeklySecurityReport.aspx">Weekly Security Report</a></li>
+                                        <li><a href="../../Pages/Managers/WorkSchedule.aspx">Work Schedule</a></li>
+                                    </ul>
+                                </li>
+                                <%-- operators dropdown --%>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">Operators
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="../../Pages/Operations/CallInAbsent.aspx">Call In Absent</a></li>
+                                        <li><a href="../../Pages/Operations/Complaints.aspx">Complaints</a></li>
+                                        <li><a href="../../Pages/Operations/DailyLog.aspx">Daily Log</a></li>
+                                        <li><a href="../../Pages/Operations/Incidents.aspx">Incidents</a></li>
+                                        <li><a href="../../Pages/Operations/ViewWorkSchedule.aspx">View Work Schedule</a></li>
+                                    </ul>
+                                </li>
+                                <%-- supervisor dropdown  --%>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">Supervisors
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="../../Pages/Supervisors/DailyPoastAssignment.aspx">Daily Post Assignment</a></li>
+                                        <li><a href="../../Pages/Supervisors/ShiftReport.aspx">Shift Report</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </asp:Panel>
+
+                        <%-- Supervisors --%>
+                        <asp:Panel ID="pnlSupervisors" Visible="false" runat="server">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../../Pages/Supervisors/DailyPoastAssignment.aspx">Daily Post Assignment</a></li>
+                                <li><a href="../../Pages/Supervisors/ShiftReport.aspx">Shift Report</a></li>
+                            </ul>
+                        </asp:Panel>
+
+                        <%-- Administrator --%>
+                        <asp:Panel ID="pnlAdministrators" Visible="false" runat="server">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../../Pages/Administrator/ManageUsers.aspx">Manage Users</a></li>
+                                 <li><a href="../../Pages/Administrator/DateTimeGrant.aspx">Date/Time Grant</a></li>
+                            </ul>
+                        </asp:Panel>
+
+                        <%-- Contract Compliance Officer --%>
+                        <asp:Panel ID="pnlComplianceOff" Visible="false" runat="server">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../../Pages/Operations/Complaints.aspx">Complaints</a></li>
+                                <li><a href="../../Pages/Operations/DailyLog.aspx">Daily Log</a></li>
+                                <li><a href="../../Pages/Operations/Incidents.aspx">Incidents</a></li>
+                            </ul>
+                        </asp:Panel>
+
+                         <%-- Work Schedule --%>
+                        <asp:Panel ID="pnlWorkSchedule" Visible="false" runat="server">
+                        <ul class="nav navbar-nav">
+                           <li><a href="../../Pages/Operations/ViewWorkSchedule.aspx">Work Schedule</a></li>
+                        </ul>
+                        </asp:Panel>
+
+                        <%-- Reports --%>
+                        <asp:Panel ID="pnlReports" Visible="false" runat="server">
+                        <ul class="nav navbar-nav">
+                            <li><a href="../../Pages/Reports/Reports.aspx">Reports</a></li>
+                        </ul>
+                        </asp:Panel>
+
+                         <%-- User Manual --%>
+                         <asp:Panel ID="pnlUserManual" Visible="false" runat="server">
+                        <ul class="nav navbar-nav">
+                            <li><a href="../../Pages/Help/ISS_UserManual.pdf">User Manual</a></li>
+                        </ul>
+                        </asp:Panel>
+
+                        <%-- Login Controls --%>
+                        <div>
+                            <asp:LoginView ID="LoginView1" runat="server">
+                                <AnonymousTemplate>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a id="loginLink" runat="server" href="~/Pages/Account/Login.aspx">
+                                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in</a></li>
+                                    </ul>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a id="A1" runat="server" href="~/Pages/Account/ChangePassword.aspx" title="">Welcome, 
+                                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                            <asp:LoginName ID="LoginName1" runat="server" />
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Sign out" LogoutPageUrl="~/Pages/Default.aspx" />
+                                        </li>
+                                    </ul>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </div>
+                    </div>
+                    <!-- /.navbar-collapse-->
+                </div>
+                <!--container-fluid-->
+            </nav>
+        </div>
+
+        <div class="container">
+            <%-- Content Placement --%>
+            <div class="panel panel-default">
+                <%-- Breadcrumbs --%>
+                <div class="panel-heading">
+                    <asp:SiteMapPath ID="SiteMapPath1" CssClass="breadcrumb" PathSeparator=" / " runat="server"></asp:SiteMapPath>
+                </div>
+                <%-- Main Content --%>
+                <div class="panel-body">
+                    <div>
+                        <div class="messagealert" id="alert_container">
+                        </div>
+                    </div>
+                    <asp:ContentPlaceHolder ID="FeaturedContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <asp:UpdateProgress ID="updateProgress" runat="server">
+                    <ProgressTemplate>
+                        <div style="position: fixed; text-align: center; height: 100%; width: 100%; top: 0; right: 0; left: 0; z-index: 9999999; opacity: 0.7;">
+                            <div style="">
+                                <asp:Image ID="imgUpdateProgress" runat="server" ImageUrl="~/Images/loader2.gif" AlternateText="Loading ..." Style="padding: 10px; position: fixed; top: 45%; left: 50%;" />
+                            </div>
+                        </div>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+
+                <%-- Footer --%>
+                <div class="panel-footer">
+                    <footer>
+                        <div class="row">
+                                <div class="col-sm-8 col-xs-8">
+                        <p>&copy; <%: DateTime.Now.Year %> - Integrated Security Services.</p>
+                        </div>
+                                <div class="col-sm-4 col-xs-4 text-right">
+<%--                            <asp:ImageButton ID="ibCompuServ" runat="server" ImageUrl="~/Images/compuServLogo.png" OnClientClick="window.open('http://compuservgy.com/')" Width="50px" Height="50px" />--%>
+                        </div>
+                            </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,119 @@
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\ISSA.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\ISSA.pdb
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\AjaxControlToolkit.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Antlr3.Runtime.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.Core.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\EntityFramework.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\System.Web.Optimization.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\System.Web.Providers.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\WebGrease.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\EntityFramework.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.Core.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\obj\Debug\ISSA.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\ISSA\ISSA\obj\Debug\ISSA.pdb
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST10232015\ISSA\bin\ISSA.dll
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST10232015\ISSA\bin\ISSA.pdb
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST10232015\ISSA\obj\Debug\ISSA.dll
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST10232015\ISSA\obj\Debug\ISSA.pdb
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\ISSA.dll
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\ISSA.pdb
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\RdlCompile.cache
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\RdlCompile.compiled
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\ISSA.dll
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\ISSA.pdb
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\EntityFramework.xml
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.Core.xml
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\ISSA.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\ISSA.pdb
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\RdlCompile.cache
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\RdlCompile.compiled
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\ISSA.dll
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\ISSA.pdb
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_EmployeeAttendance.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ManpowerAllocation.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ShortageDaily.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ShiftReport.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_DailyPostAssignment.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_WSR.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_DailyOperations.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Shortage.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Incidents.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Complaints.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_PayrollProcessing.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_EmployeeAbsent.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_WorkSchedule.rdlc
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\EntityFramework.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.Core.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\sateshp2\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\ISSA.csprojResolveAssemblyReference.cache
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_EmployeeAttendance.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ManpowerAllocation.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ShortageDaily.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ShiftReport.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_DailyPostAssignment.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_WSR.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_DailyOperations.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Shortage.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Incidents.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Complaints.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_PayrollProcessing.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_EmployeeAbsent.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\bin\Pages\Reports\rpt_WorkSchedule.rdlc
+C:\Users\Khol\Documents\Visual Studio 2012\Projects\BSD_TEST\ISSA\obj\Debug\ISSA.csprojResolveAssemblyReference.cache
+G:\Backup\BSD_TEST\ISSA\obj\Debug\ISSA.csprojResolveAssemblyReference.cache
+G:\Backup\BSD_TEST\ISSA\obj\Debug\ISSA.csproj.CoreCompileInputs.cache
+G:\Backup\BSD_TEST\ISSA\obj\Debug\ISSA.dll
+G:\Backup\BSD_TEST\ISSA\obj\Debug\ISSA.pdb
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_EmployeeAttendance.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ManpowerAllocation.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ShortageDaily.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_ShiftReport.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_DailyPostAssignment.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_WSR.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_DailyOperations.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Shortage.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Incidents.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_Complaints.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_PayrollProcessing.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_EmployeeAbsent.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Pages\Reports\rpt_WorkSchedule.rdlc
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\ISSA.dll.config
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\ISSA.dll
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\ISSA.pdb
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\obj\Debug\ISSA.csproj.CoreCompileInputs.cache
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\obj\Debug\ISSA.dll
+C:\Users\Pad\Desktop\BSD_TEST\ISSA\obj\Debug\ISSA.pdb

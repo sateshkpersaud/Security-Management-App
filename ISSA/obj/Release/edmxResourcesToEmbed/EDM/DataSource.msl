@@ -1,0 +1,1329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ISSAModelStoreContainer" CdmEntityContainer="DataSource">
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="ISSAModel.Application">
+        <MappingFragment StoreEntitySet="Applications">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Memberships">
+      <EntityTypeMapping TypeName="ISSAModel.Membership">
+        <MappingFragment StoreEntitySet="Memberships">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowsStart" ColumnName="FailedPasswordAnswerAttemptWindowsStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profiles">
+      <EntityTypeMapping TypeName="ISSAModel.Profile">
+        <MappingFragment StoreEntitySet="Profiles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValueStrings" ColumnName="PropertyValueStrings" />
+          <ScalarProperty Name="PropertyValueBinary" ColumnName="PropertyValueBinary" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ISSAModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ISSAModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Admin_RolesMasterLevel">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Admin_RolesMasterLevel">
+        <MappingFragment StoreEntitySet="tbl_Admin_RolesMasterLevel">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleTitle" ColumnName="RoleTitle" />
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Admin_RolesSubLevel">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Admin_RolesSubLevel">
+        <MappingFragment StoreEntitySet="tbl_Admin_RolesSubLevel">
+          <ScalarProperty Name="RoleSubLevelID" ColumnName="RoleSubLevelID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleTitle" ColumnName="RoleTitle" />
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Admin_User_Role">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Admin_User_Role">
+        <MappingFragment StoreEntitySet="tbl_Admin_User_Role">
+          <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleSubLevelID" ColumnName="RoleSubLevelID" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Admin_Users">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Admin_Users">
+        <MappingFragment StoreEntitySet="tbl_Admin_Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="ResetRequired" ColumnName="ResetRequired" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AuditLog">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_AuditLog">
+        <MappingFragment StoreEntitySet="tbl_AuditLog">
+          <ScalarProperty Name="AuditLogID" ColumnName="AuditLogID" />
+          <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="AuditProcess" ColumnName="AuditProcess" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Mgr_SpecialOperations">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Mgr_SpecialOperations">
+        <MappingFragment StoreEntitySet="tbl_Mgr_SpecialOperations">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="SpecialOperationsID" ColumnName="SpecialOperationsID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="EscortService" ColumnName="EscortService" />
+          <ScalarProperty Name="CashInGT" ColumnName="CashInGT" />
+          <ScalarProperty Name="CashOutGT" ColumnName="CashOutGT" />
+          <ScalarProperty Name="ExtraOfficers" ColumnName="ExtraOfficers" />
+          <ScalarProperty Name="AmountOfficers" ColumnName="AmountOfficers" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Mgr_WorkSchedule">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Mgr_WorkSchedule">
+        <MappingFragment StoreEntitySet="tbl_Mgr_WorkSchedule">
+          <ScalarProperty Name="WorkScheduleID" ColumnName="WorkScheduleID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Mgr_WorkSchedule_Days">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Mgr_WorkSchedule_Days">
+        <MappingFragment StoreEntitySet="tbl_Mgr_WorkSchedule_Days">
+          <ScalarProperty Name="WorkScheduleDateID" ColumnName="WorkScheduleDateID" />
+          <ScalarProperty Name="WorkScheduleEmployeeID" ColumnName="WorkScheduleEmployeeID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IsDayOff" ColumnName="IsDayOff" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Mgr_WorkSchedule_Employees">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Mgr_WorkSchedule_Employees">
+        <MappingFragment StoreEntitySet="tbl_Mgr_WorkSchedule_Employees">
+          <ScalarProperty Name="WorkScheduleEmployeeID" ColumnName="WorkScheduleEmployeeID" />
+          <ScalarProperty Name="WorkScheduleID" ColumnName="WorkScheduleID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="StandyByEmployeeID" ColumnName="StandyByEmployeeID" />
+          <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+          <ScalarProperty Name="Exclude" ColumnName="Exclude" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="IsTransfer" ColumnName="IsTransfer" />
+          <ScalarProperty Name="WasUnscheduled" ColumnName="WasUnscheduled" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Op_Complaints">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Op_Complaints">
+        <MappingFragment StoreEntitySet="tbl_Op_Complaints">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="ComplaintID" ColumnName="ComplaintID" />
+          <ScalarProperty Name="ComplaintNumber" ColumnName="ComplaintNumber" />
+          <ScalarProperty Name="ComplaintChannelID" ColumnName="ComplaintChannelID" />
+          <ScalarProperty Name="PersonMakingReport" ColumnName="PersonMakingReport" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="DateOfIncident" ColumnName="DateOfIncident" />
+          <ScalarProperty Name="TimeOfIncident" ColumnName="TimeOfIncident" />
+          <ScalarProperty Name="ReceivedByID" ColumnName="ReceivedByID" />
+          <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+          <ScalarProperty Name="AcknowledgementID" ColumnName="AcknowledgementID" />
+          <ScalarProperty Name="ClientComplaint" ColumnName="ClientComplaint" />
+          <ScalarProperty Name="FeedbackProvided" ColumnName="FeedbackProvided" />
+          <ScalarProperty Name="DateOfFeedback" ColumnName="DateOfFeedback" />
+          <ScalarProperty Name="ActionTaken" ColumnName="ActionTaken" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Op_DailyLogs">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Op_DailyLogs">
+        <MappingFragment StoreEntitySet="tbl_Op_DailyLogs">
+          <ScalarProperty Name="DailyLogID" ColumnName="DailyLogID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="LogNumber" ColumnName="LogNumber" />
+          <ScalarProperty Name="WorkScheduleID" ColumnName="WorkScheduleID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Op_DailyLogsCallLog">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Op_DailyLogsCallLog">
+        <MappingFragment StoreEntitySet="tbl_Op_DailyLogsCallLog">
+          <ScalarProperty Name="CallLogID" ColumnName="CallLogID" />
+          <ScalarProperty Name="DailyLogID" ColumnName="DailyLogID" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Reports" ColumnName="Reports" />
+          <ScalarProperty Name="SupCheckLocation" ColumnName="SupCheckLocation" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Op_IncidentPersonsAffected">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Op_IncidentPersonsAffected">
+        <MappingFragment StoreEntitySet="tbl_Op_IncidentPersonsAffected">
+          <ScalarProperty Name="PersonAffectedID" ColumnName="PersonAffectedID" />
+          <ScalarProperty Name="AffectedTypeID" ColumnName="AffectedTypeID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="OtherTypeDescription" ColumnName="OtherTypeDescription" />
+          <ScalarProperty Name="IncidentID" ColumnName="IncidentID" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_AbsentType">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_AbsentType">
+        <MappingFragment StoreEntitySet="tbl_Ref_AbsentType">
+          <ScalarProperty Name="IsForDayOff" ColumnName="IsForDayOff" />
+          <ScalarProperty Name="AbsentTypeID" ColumnName="AbsentTypeID" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_Areas">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_Areas">
+        <MappingFragment StoreEntitySet="tbl_Ref_Areas">
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_ComplaintChannel">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_ComplaintChannel">
+        <MappingFragment StoreEntitySet="tbl_Ref_ComplaintChannel">
+          <ScalarProperty Name="ComplaintChannelID" ColumnName="ComplaintChannelID" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsComplaintsMade" ColumnName="IsComplaintsMade" />
+          <ScalarProperty Name="IsAcknowledgement" ColumnName="IsAcknowledgement" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_Departments">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_Departments">
+        <MappingFragment StoreEntitySet="tbl_Ref_Departments">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_IncidentPersonAffectedType">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_IncidentPersonAffectedType">
+        <MappingFragment StoreEntitySet="tbl_Ref_IncidentPersonAffectedType">
+          <ScalarProperty Name="AffectedTypeID" ColumnName="AffectedTypeID" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_IncidentTypes">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_IncidentTypes">
+        <MappingFragment StoreEntitySet="tbl_Ref_IncidentTypes">
+          <ScalarProperty Name="IncidentTypeID" ColumnName="IncidentTypeID" />
+          <ScalarProperty Name="IncidentType" ColumnName="IncidentType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_Locations">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_Locations">
+        <MappingFragment StoreEntitySet="tbl_Ref_Locations">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="AddressLineOne" ColumnName="AddressLineOne" />
+          <ScalarProperty Name="AddressLineTwo" ColumnName="AddressLineTwo" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ContactNumberOne" ColumnName="ContactNumberOne" />
+          <ScalarProperty Name="ContactNumberTwo" ColumnName="ContactNumberTwo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_Positions">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_Positions">
+        <MappingFragment StoreEntitySet="tbl_Ref_Positions">
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_Regions">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_Regions">
+        <MappingFragment StoreEntitySet="tbl_Ref_Regions">
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="RegionNumber" ColumnName="RegionNumber" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_Shifts">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_Shifts">
+        <MappingFragment StoreEntitySet="tbl_Ref_Shifts">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+          <ScalarProperty Name="HoursInShift" ColumnName="HoursInShift" />
+          <ScalarProperty Name="IsDay" ColumnName="IsDay" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_SickLeaveFor">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_SickLeaveFor">
+        <MappingFragment StoreEntitySet="tbl_Ref_SickLeaveFor">
+          <ScalarProperty Name="SickLeaveForID" ColumnName="SickLeaveForID" />
+          <ScalarProperty Name="LeaveFor" ColumnName="LeaveFor" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ref_WorkScheduleCategories">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Ref_WorkScheduleCategories">
+        <MappingFragment StoreEntitySet="tbl_Ref_WorkScheduleCategories">
+          <ScalarProperty Name="WorkScheduleCategorieID" ColumnName="WorkScheduleCategorieID" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Sup_Employees">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Sup_Employees">
+        <MappingFragment StoreEntitySet="tbl_Sup_Employees">
+          <ScalarProperty Name="IsEmployee" ColumnName="IsEmployee" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="OtherName" ColumnName="OtherName" />
+          <ScalarProperty Name="DateHired" ColumnName="DateHired" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ResetNeeded" ColumnName="ResetNeeded" />
+          <ScalarProperty Name="IsStandbyStaff" ColumnName="IsStandbyStaff" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Sup_ShiftReport">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Sup_ShiftReport">
+        <MappingFragment StoreEntitySet="tbl_Sup_ShiftReport">
+          <ScalarProperty Name="ShiftReportID" ColumnName="ShiftReportID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="SupervisorID" ColumnName="SupervisorID" />
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Sup_ShiftReportChecks">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Sup_ShiftReportChecks">
+        <MappingFragment StoreEntitySet="tbl_Sup_ShiftReportChecks">
+          <ScalarProperty Name="ChecksID" ColumnName="ChecksID" />
+          <ScalarProperty Name="ShiftReportID" ColumnName="ShiftReportID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="CheckSequence" ColumnName="CheckSequence" />
+          <ScalarProperty Name="GeneralObservations" ColumnName="GeneralObservations" />
+          <ScalarProperty Name="CorrectionsMadeSuggested" ColumnName="CorrectionsMadeSuggested" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Sup_ShiftReportChecks_Officers">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Sup_ShiftReportChecks_Officers">
+        <MappingFragment StoreEntitySet="tbl_Sup_ShiftReportChecks_Officers">
+          <ScalarProperty Name="ShiftReportChecksOfficerID" ColumnName="ShiftReportChecksOfficerID" />
+          <ScalarProperty Name="ChecksID" ColumnName="ChecksID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ISSAModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsersInRoles" TypeName="ISSAModel.UsersInRoles" StoreEntitySet="UsersInRoles">
+      <EndProperty Name="Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Acknowledgement_Sel4DDL" FunctionName="ISSAModel.Store.sp_Acknowledgement_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Acknowledgement_Sel4DDL_Result">
+          <ScalarProperty Name="ComplaintChannelID" ColumnName="ComplaintChannelID" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ISSAModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_Area_Sel4DDL" FunctionName="ISSAModel.Store.sp_Area_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Area_Sel4DDL_Result">
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CallForwardedTo_Sel4DDL" FunctionName="ISSAModel.Store.sp_CallForwardedTo_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_CallForwardedTo_Sel4DDL_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CallInOff_Search" FunctionName="ISSAModel.Store.sp_CallInOff_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_CallInOff_Search_Result">
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="CallInOffID" ColumnName="CallInOffID" />
+          <ScalarProperty Name="isCallIn" ColumnName="isCallIn" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmpFullName" ColumnName="EmpFullName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="CallTakenByID" ColumnName="CallTakenByID" />
+          <ScalarProperty Name="CallTakenBy" ColumnName="CallTakenBy" />
+          <ScalarProperty Name="ForwardedToID" ColumnName="ForwardedToID" />
+          <ScalarProperty Name="ForwardedTo" ColumnName="ForwardedTo" />
+          <ScalarProperty Name="WorkSchedule" ColumnName="WorkSchedule" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="AbsentTypeID" ColumnName="AbsentTypeID" />
+          <ScalarProperty Name="AbsentType" ColumnName="AbsentType" />
+          <ScalarProperty Name="SickLeaveForID" ColumnName="SickLeaveForID" />
+          <ScalarProperty Name="SickLeaveFor" ColumnName="SickLeaveFor" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="OtherTypeDescription" ColumnName="OtherTypeDescription" />
+          <ScalarProperty Name="OtherSickLeaveForTypeDescription" ColumnName="OtherSickLeaveForTypeDescription" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CallTakenBy_Sel4DDL" FunctionName="ISSAModel.Store.sp_CallTakenBy_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_CallTakenBy_Sel4DDL_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ComplaintMode_Sel4DDL" FunctionName="ISSAModel.Store.sp_ComplaintMode_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_ComplaintMode_Sel4DDL_Result">
+          <ScalarProperty Name="ComplaintChannelID" ColumnName="ComplaintChannelID" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Complaints_Search" FunctionName="ISSAModel.Store.sp_Complaints_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Complaints_Search_Result">
+          <ScalarProperty Name="ComplaintID" ColumnName="ComplaintID" />
+          <ScalarProperty Name="ComplaintNumber" ColumnName="ComplaintNumber" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="DateOfIncident" ColumnName="DateOfIncident" />
+          <ScalarProperty Name="TimeOfIncident" ColumnName="TimeOfIncident" />
+          <ScalarProperty Name="ComplaintChannelID" ColumnName="ComplaintChannelID" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="PersonMakingReport" ColumnName="PersonMakingReport" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="ReceivedByID" ColumnName="ReceivedByID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+          <ScalarProperty Name="AcknowledgementID" ColumnName="AcknowledgementID" />
+          <ScalarProperty Name="Acknowledgement" ColumnName="Acknowledgement" />
+          <ScalarProperty Name="ClientComplaint" ColumnName="ClientComplaint" />
+          <ScalarProperty Name="feedbackProvided" ColumnName="feedbackProvided" />
+          <ScalarProperty Name="DateOfFeedback" ColumnName="DateOfFeedback" />
+          <ScalarProperty Name="ActionTaken" ColumnName="ActionTaken" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ISSAModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_ActualPersonWorking_Select" FunctionName="ISSAModel.Store.sp_DailyLog_ActualPersonWorking_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_ActualPersonWorking_Select_Result">
+          <ScalarProperty Name="PersonWorkingID" ColumnName="PersonWorkingID" />
+          <ScalarProperty Name="IsPresent" ColumnName="IsPresent" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="isStandBy" ColumnName="isStandBy" />
+          <ScalarProperty Name="IsDayOff" ColumnName="IsDayOff" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_Audit_Select" FunctionName="ISSAModel.Store.sp_DailyLog_Audit_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_Audit_Select_Result">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_CallLog_Select" FunctionName="ISSAModel.Store.sp_DailyLog_CallLog_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_CallLog_Select_Result">
+          <ScalarProperty Name="CallLogID" ColumnName="CallLogID" />
+          <ScalarProperty Name="TimeOfCall" ColumnName="TimeOfCall" />
+          <ScalarProperty Name="Reports" ColumnName="Reports" />
+          <ScalarProperty Name="SupCheckLocation" ColumnName="SupCheckLocation" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_Doubles_Select" FunctionName="ISSAModel.Store.sp_DailyLog_Doubles_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_Doubles_Select_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="shiftTime" ColumnName="shiftTime" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_Doubles_Select2" FunctionName="ISSAModel.Store.sp_DailyLog_Doubles_Select2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_Doubles_Select2_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="shiftTime" ColumnName="shiftTime" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_Doubles_SelectAllEmployees" FunctionName="ISSAModel.Store.sp_DailyLog_Doubles_SelectAllEmployees">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_Doubles_SelectAllEmployees_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="shiftTime" ColumnName="shiftTime" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_DoublesWorking_Select" FunctionName="ISSAModel.Store.sp_DailyLog_DoublesWorking_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_DoublesWorking_Select_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DoubleID" ColumnName="DoubleID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_LastCheckLocationAndTime" FunctionName="ISSAModel.Store.sp_DailyLog_LastCheckLocationAndTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_LastCheckLocationAndTime_Result">
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="TimeOfCall" ColumnName="TimeOfCall" />
+          <ScalarProperty Name="SupCheckLocation" ColumnName="SupCheckLocation" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_LastCheckTime" FunctionName="ISSAModel.Store.sp_DailyLog_LastCheckTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_LastCheckTime_Result">
+          <ScalarProperty Name="TimeOfCall" ColumnName="TimeOfCall" />
+          <ScalarProperty Name="SupCheckLocation" ColumnName="SupCheckLocation" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_PersonWorking_Select" FunctionName="ISSAModel.Store.sp_DailyLog_PersonWorking_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_PersonWorking_Select_Result">
+          <ScalarProperty Name="PersonWorkingID" ColumnName="PersonWorkingID" />
+          <ScalarProperty Name="IsPresent" ColumnName="IsPresent" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="isStandBy" ColumnName="isStandBy" />
+          <ScalarProperty Name="IsDayOff" ColumnName="IsDayOff" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_Search" FunctionName="ISSAModel.Store.sp_DailyLog_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_Search_Result">
+          <ScalarProperty Name="DailyLogID" ColumnName="DailyLogID" />
+          <ScalarProperty Name="LogNumber" ColumnName="LogNumber" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PersonsPresent" ColumnName="PersonsPresent" />
+          <ScalarProperty Name="PersonsAbsent" ColumnName="PersonsAbsent" />
+          <ScalarProperty Name="Switches" ColumnName="Switches" />
+          <ScalarProperty Name="Doubles" ColumnName="Doubles" />
+          <ScalarProperty Name="CallsMade" ColumnName="CallsMade" />
+          <ScalarProperty Name="LastCheckTime" ColumnName="LastCheckTime" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_Switches_Select" FunctionName="ISSAModel.Store.sp_DailyLog_Switches_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_Switches_Select_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="isStandBy" ColumnName="isStandBy" />
+          <ScalarProperty Name="IsDayOff" ColumnName="IsDayOff" />
+          <ScalarProperty Name="SwitchID" ColumnName="SwitchID" />
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DailyLog_SwitchesWorking_Select" FunctionName="ISSAModel.Store.sp_DailyLog_SwitchesWorking_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_DailyLog_SwitchesWorking_Select_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="isStandBy" ColumnName="isStandBy" />
+          <ScalarProperty Name="IsDayOff" ColumnName="IsDayOff" />
+          <ScalarProperty Name="SwitchID" ColumnName="SwitchID" />
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Department_Sel4DDL" FunctionName="ISSAModel.Store.sp_Department_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Department_Sel4DDL_Result">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ISSAModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_Employee_Search" FunctionName="ISSAModel.Store.sp_Employee_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Employee_Search_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="OtherName" ColumnName="OtherName" />
+          <ScalarProperty Name="DateHired" ColumnName="DateHired" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="isStandByStaff" ColumnName="isStandByStaff" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="employeeNumber" ColumnName="employeeNumber" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Employee_Sel4DDL" FunctionName="ISSAModel.Store.sp_Employee_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Employee_Sel4DDL_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Employee_Sel4DDL_ByPositionID" FunctionName="ISSAModel.Store.sp_Employee_Sel4DDL_ByPositionID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Employee_Sel4DDL_ByPositionID_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Employee_SelectDayOffs" FunctionName="ISSAModel.Store.sp_Employee_SelectDayOffs" />
+    <FunctionImportMapping FunctionImportName="sp_Employee_SelectForWorkSchedule" FunctionName="ISSAModel.Store.sp_Employee_SelectForWorkSchedule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Employee_SelectForWorkSchedule_Result">
+          <ScalarProperty Name="WorkScheduleEmployeeID" ColumnName="WorkScheduleEmployeeID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="employeenumber" ColumnName="employeenumber" />
+          <ScalarProperty Name="locationid" ColumnName="locationid" />
+          <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+          <ScalarProperty Name="Exclude" ColumnName="Exclude" />
+          <ScalarProperty Name="StandyByEmployeeID" ColumnName="StandyByEmployeeID" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Employee_SelectFromWorkSchedule" FunctionName="ISSAModel.Store.sp_Employee_SelectFromWorkSchedule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Employee_SelectFromWorkSchedule_Result">
+          <ScalarProperty Name="WorkScheduleEmployeeID" ColumnName="WorkScheduleEmployeeID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="employeenumber" ColumnName="employeenumber" />
+          <ScalarProperty Name="locationid" ColumnName="locationid" />
+          <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+          <ScalarProperty Name="Exclude" ColumnName="Exclude" />
+          <ScalarProperty Name="StandyByEmployeeID" ColumnName="StandyByEmployeeID" />
+          <ScalarProperty Name="createdOn" ColumnName="createdOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Employee_UnscheduledSelectForWorkSchedule" FunctionName="ISSAModel.Store.sp_Employee_UnscheduledSelectForWorkSchedule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Employee_UnscheduledSelectForWorkSchedule_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="employeenumber" ColumnName="employeenumber" />
+          <ScalarProperty Name="locationid" ColumnName="locationid" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FilterHistory" FunctionName="ISSAModel.Store.sp_FilterHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_FilterHistory_Result">
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="AuditProcess" ColumnName="AuditProcess" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="ISSAModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="ISSAModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Incidents_Search" FunctionName="ISSAModel.Store.sp_Incidents_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Incidents_Search_Result">
+          <ScalarProperty Name="IncidentID" ColumnName="IncidentID" />
+          <ScalarProperty Name="IncidentNumber" ColumnName="IncidentNumber" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="DateOccured" ColumnName="DateOccured" />
+          <ScalarProperty Name="TimeOccured" ColumnName="TimeOccured" />
+          <ScalarProperty Name="IncidentType" ColumnName="IncidentType" />
+          <ScalarProperty Name="IncidentTypeID" ColumnName="IncidentTypeID" />
+          <ScalarProperty Name="OtherTypeDescription" ColumnName="OtherTypeDescription" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_IncidentType_Sel4DDL" FunctionName="ISSAModel.Store.sp_IncidentType_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_IncidentType_Sel4DDL_Result">
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="IncidentTypeID" ColumnName="IncidentTypeID" />
+          <ScalarProperty Name="IncidentType" ColumnName="IncidentType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Location_Sel4DDL_ByAreaID" FunctionName="ISSAModel.Store.sp_Location_Sel4DDL_ByAreaID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Location_Sel4DDL_ByAreaID_Result">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Operators_Sel4DDL" FunctionName="ISSAModel.Store.sp_Operators_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Operators_Sel4DDL_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Position_Sel4DDL" FunctionName="ISSAModel.Store.sp_Position_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Position_Sel4DDL_Result">
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ISSAModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_RPT_WorkSchedule" FunctionName="ISSAModel.Store.sp_RPT_WorkSchedule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_RPT_WorkSchedule_Result">
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="staff" ColumnName="staff" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Shift_Sel4DDL" FunctionName="ISSAModel.Store.sp_Shift_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Shift_Sel4DDL_Result">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Shift_Sel4DDL_ByPositionID" FunctionName="ISSAModel.Store.sp_Shift_Sel4DDL_ByPositionID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Shift_Sel4DDL_ByPositionID_Result">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Shift_Sel4DDL_ByPositionIDAndTime" FunctionName="ISSAModel.Store.sp_Shift_Sel4DDL_ByPositionIDAndTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Shift_Sel4DDL_ByPositionIDAndTime_Result">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Shift_Sel4TAB_ByPositionID" FunctionName="ISSAModel.Store.sp_Shift_Sel4TAB_ByPositionID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Shift_Sel4TAB_ByPositionID_Result">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ShiftReports_Search" FunctionName="ISSAModel.Store.sp_ShiftReports_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_ShiftReports_Search_Result">
+          <ScalarProperty Name="ShiftReportID" ColumnName="ShiftReportID" />
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+          <ScalarProperty Name="SupervisorID" ColumnName="SupervisorID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Checks" ColumnName="Checks" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SickLeaveFor_Sel4DDL" FunctionName="ISSAModel.Store.sp_SickLeaveFor_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_SickLeaveFor_Sel4DDL_Result">
+          <ScalarProperty Name="SickLeaveForID" ColumnName="SickLeaveForID" />
+          <ScalarProperty Name="LeaveFor" ColumnName="LeaveFor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SpecialOperations_Search" FunctionName="ISSAModel.Store.sp_SpecialOperations_Search">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_SpecialOperations_Search_Result">
+          <ScalarProperty Name="SpecialOperationsID" ColumnName="SpecialOperationsID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="EscortService" ColumnName="EscortService" />
+          <ScalarProperty Name="CashInGT" ColumnName="CashInGT" />
+          <ScalarProperty Name="CashOutGT" ColumnName="CashOutGT" />
+          <ScalarProperty Name="ExtraOfficersAmount" ColumnName="ExtraOfficersAmount" />
+          <ScalarProperty Name="AmountOfficers" ColumnName="AmountOfficers" />
+          <ScalarProperty Name="ExtraOfficers" ColumnName="ExtraOfficers" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_StandByEmployee_Sel4DDL" FunctionName="ISSAModel.Store.sp_StandByEmployee_Sel4DDL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_StandByEmployee_Sel4DDL_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ISSAModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_WorkSchedule_AuditSelect" FunctionName="ISSAModel.Store.sp_WorkSchedule_AuditSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_WorkSchedule_AuditSelect_Result">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbl_Sup_DailyMasterRoster">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Sup_DailyMasterRoster">
+        <MappingFragment StoreEntitySet="tbl_Sup_DailyMasterRoster">
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="RelievingOfficer" ColumnName="RelievingOfficer" />
+          <ScalarProperty Name="ReasonForAbsence" ColumnName="ReasonForAbsence" />
+          <ScalarProperty Name="OfficerAssigned" ColumnName="OfficerAssigned" />
+          <ScalarProperty Name="PostAssignmentID" ColumnName="PostAssignmentID" />
+          <ScalarProperty Name="MasterRosterID" ColumnName="MasterRosterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Employee_Sel4DDL_2" FunctionName="ISSAModel.Store.sp_Employee_Sel4DDL_2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_Employee_Sel4DDL_2_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_FilterUsers" FunctionName="ISSAModel.Store.sp_FilterUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ISSAModel.sp_FilterUsers_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbl_Sup_DailyPostAssignment">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Sup_DailyPostAssignment">
+        <MappingFragment StoreEntitySet="tbl_Sup_DailyPostAssignment">
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="SummaryOfIncidents" ColumnName="SummaryOfIncidents" />
+          <ScalarProperty Name="PassedOnTo" ColumnName="PassedOnTo" />
+          <ScalarProperty Name="PassedOnFrom" ColumnName="PassedOnFrom" />
+          <ScalarProperty Name="ShiftBriefingNotes" ColumnName="ShiftBriefingNotes" />
+          <ScalarProperty Name="ShiftSummary" ColumnName="ShiftSummary" />
+          <ScalarProperty Name="Sleeping" ColumnName="Sleeping" />
+          <ScalarProperty Name="NotDressedProperly" ColumnName="NotDressedProperly" />
+          <ScalarProperty Name="OfficersOnDayOff" ColumnName="OfficersOnDayOff" />
+          <ScalarProperty Name="OfficersCallInForDayOff" ColumnName="OfficersCallInForDayOff" />
+          <ScalarProperty Name="OfficersCalledOut" ColumnName="OfficersCalledOut" />
+          <ScalarProperty Name="OfficersAssigned" ColumnName="OfficersAssigned" />
+          <ScalarProperty Name="OfficersAbsent" ColumnName="OfficersAbsent" />
+          <ScalarProperty Name="OfficersPresent" ColumnName="OfficersPresent" />
+          <ScalarProperty Name="CallsForAssistance" ColumnName="CallsForAssistance" />
+          <ScalarProperty Name="LateArrivals" ColumnName="LateArrivals" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PostAssignmentID" ColumnName="PostAssignmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temptables">
+      <EntityTypeMapping TypeName="ISSAModel.temptable">
+        <MappingFragment StoreEntitySet="temptable">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Op_DailyLogsPersonWorking">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Op_DailyLogsPersonWorking">
+        <MappingFragment StoreEntitySet="tbl_Op_DailyLogsPersonWorking">
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsDouble" ColumnName="IsDouble" />
+          <ScalarProperty Name="IsSwitch" ColumnName="IsSwitch" />
+          <ScalarProperty Name="TimeClocked" ColumnName="TimeClocked" />
+          <ScalarProperty Name="IsPresent" ColumnName="IsPresent" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="DailyLogID" ColumnName="DailyLogID" />
+          <ScalarProperty Name="PersonWorkingID" ColumnName="PersonWorkingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Mgr_WeeklySecurityReport">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Mgr_WeeklySecurityReport">
+        <MappingFragment StoreEntitySet="tbl_Mgr_WeeklySecurityReport">
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+          <ScalarProperty Name="WeekEnd" ColumnName="WeekEnd" />
+          <ScalarProperty Name="WeekStart" ColumnName="WeekStart" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="SecurityReportID" ColumnName="SecurityReportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Mgr_WeeklySecurityReportComparison">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Mgr_WeeklySecurityReportComparison">
+        <MappingFragment StoreEntitySet="tbl_Mgr_WeeklySecurityReportComparison">
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsScheduled" ColumnName="IsScheduled" />
+          <ScalarProperty Name="Switches" ColumnName="Switches" />
+          <ScalarProperty Name="IncidentComplaints" ColumnName="IncidentComplaints" />
+          <ScalarProperty Name="Absent" ColumnName="Absent" />
+          <ScalarProperty Name="Present" ColumnName="Present" />
+          <ScalarProperty Name="Sunday" ColumnName="Sunday" />
+          <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+          <ScalarProperty Name="Friday" ColumnName="Friday" />
+          <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+          <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+          <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+          <ScalarProperty Name="Monday" ColumnName="Monday" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="CashOutGT" ColumnName="CashOutGT" />
+          <ScalarProperty Name="CashInGT" ColumnName="CashInGT" />
+          <ScalarProperty Name="SecurityReportID" ColumnName="SecurityReportID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="ComparisonID" ColumnName="ComparisonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Mgr_DateTimeGrant">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Mgr_DateTimeGrant">
+        <MappingFragment StoreEntitySet="tbl_Mgr_DateTimeGrant">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DateTimeTo" ColumnName="DateTimeTo" />
+          <ScalarProperty Name="DateTimeFrom" ColumnName="DateTimeFrom" />
+          <ScalarProperty Name="GrantID" ColumnName="GrantID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Reports">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Reports">
+        <MappingFragment StoreEntitySet="tbl_Reports">
+          <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ReportsRole">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_ReportsRole">
+        <MappingFragment StoreEntitySet="tbl_ReportsRole">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ReportRoleID" ColumnName="ReportRoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Op_Incidents">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Op_Incidents">
+        <MappingFragment StoreEntitySet="tbl_Op_Incidents">
+          <ScalarProperty Name="ActionTaken" ColumnName="ActionTaken" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IncidentNumber" ColumnName="IncidentNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OtherTypeDescription" ColumnName="OtherTypeDescription" />
+          <ScalarProperty Name="IncidentTypeID" ColumnName="IncidentTypeID" />
+          <ScalarProperty Name="TimeOccured" ColumnName="TimeOccured" />
+          <ScalarProperty Name="DateOccured" ColumnName="DateOccured" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="IncidentID" ColumnName="IncidentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Op_CallIn_Absent">
+      <EntityTypeMapping TypeName="ISSAModel.tbl_Op_CallIn_Absent">
+        <MappingFragment StoreEntitySet="tbl_Op_CallIn_Absent">
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="OtherSickLeaveForTypeDescription" ColumnName="OtherSickLeaveForTypeDescription" />
+          <ScalarProperty Name="SickLeaveForID" ColumnName="SickLeaveForID" />
+          <ScalarProperty Name="OtherTypeDescription" ColumnName="OtherTypeDescription" />
+          <ScalarProperty Name="AbsentTypeID" ColumnName="AbsentTypeID" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="WorkSchedule" ColumnName="WorkSchedule" />
+          <ScalarProperty Name="ForwardedToID" ColumnName="ForwardedToID" />
+          <ScalarProperty Name="CallTakenByID" ColumnName="CallTakenByID" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="IsCallIn" ColumnName="IsCallIn" />
+          <ScalarProperty Name="CallInOffID" ColumnName="CallInOffID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

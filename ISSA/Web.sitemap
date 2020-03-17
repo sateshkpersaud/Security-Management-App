@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="/Pages/Default.aspx" title="Home"  description="Home Page">
+        
+      <!--Manager-->
+        <siteMapNode url="" title="Managers"  description="">
+          <siteMapNode url="/Pages/Managers/Alerts.aspx" description="Alerts" />
+          <siteMapNode url="/Pages/Managers/Employees.aspx" description="Employees" />
+          <siteMapNode url="/Pages/Managers/ReferenceData.aspx" description="Reference Data" />
+          <siteMapNode url="/Pages/Managers/SpecialOperations.aspx" description="Special Operations" />
+          <siteMapNode url="/Pages/Managers/WeeklySecurityReport.aspx" description="Weekly Security Report" />
+          <siteMapNode url="/Pages/Managers/WorkSchedule.aspx" description="Work Schedule" />
+        </siteMapNode>
+
+      <!--Operators-->
+      <siteMapNode url="" title="Operators"  description="">
+        <siteMapNode url="/Pages/Operations/CallInAbsent.aspx" description="Call in Absent" />
+        <siteMapNode url="/Pages/Operations/Complaints.aspx" description="Complaints" />
+        <siteMapNode url="/Pages/Operations/DailyLog.aspx" description="Daily Log" />
+        <siteMapNode url="/Pages/Operations/Incidents.aspx" description="Incidents" />
+        <siteMapNode url="/Pages/Operations/ViewWorkSchedule.aspx" description="Work Schedule" />
+      </siteMapNode>
+
+      <!--Administrator-->
+      <siteMapNode url="" title="Administrator"  description="">
+        <siteMapNode url="/Pages/Administrator/ManageUsers.aspx" description="Manage Users" />
+          <siteMapNode url="/Pages/Administrator/DatetimeGrant.aspx" description="Date Time Grant" />
+      </siteMapNode>
+
+      <!--Supervisor-->
+      <siteMapNode url="" title="Supervisor"  description="">
+        <siteMapNode url="/Pages/Supervisors/DailyPoastAssignment.aspx" description="DPA" />
+        <siteMapNode url="/Pages/Supervisors/ShiftReport.aspx" description="Shift Report" />
+      </siteMapNode>
+
+      <!--Report-->
+      <siteMapNode url="" title="Reports"  description="">
+        <siteMapNode url="/Pages/Reports/Reports.aspx" description="Reports" />
+      </siteMapNode>
+
+      <!--Help--><!--
+      <siteMapNode url="" title="Managers"  description=""></siteMapNode>
+
+      --><!--Account--><!--
+      <siteMapNode url="" title="Managers"  description=""></siteMapNode>-->
+
+    </siteMapNode>
+</siteMap>

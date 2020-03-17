@@ -1,0 +1,2348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISSAModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DataSource" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Applications" EntityType="ISSAModel.Application" />
+    <EntitySet Name="Memberships" EntityType="ISSAModel.Membership" />
+    <EntitySet Name="Profiles" EntityType="ISSAModel.Profile" />
+    <EntitySet Name="Roles" EntityType="ISSAModel.Role" />
+    <EntitySet Name="sysdiagrams" EntityType="ISSAModel.sysdiagram" />
+    <EntitySet Name="tbl_Admin_RolesMasterLevel" EntityType="ISSAModel.tbl_Admin_RolesMasterLevel" />
+    <EntitySet Name="tbl_Admin_RolesSubLevel" EntityType="ISSAModel.tbl_Admin_RolesSubLevel" />
+    <EntitySet Name="tbl_Admin_User_Role" EntityType="ISSAModel.tbl_Admin_User_Role" />
+    <EntitySet Name="tbl_Admin_Users" EntityType="ISSAModel.tbl_Admin_Users" />
+    <EntitySet Name="tbl_AuditLog" EntityType="ISSAModel.tbl_AuditLog" />
+    <EntitySet Name="tbl_Mgr_SpecialOperations" EntityType="ISSAModel.tbl_Mgr_SpecialOperations" />
+    <EntitySet Name="tbl_Mgr_WorkSchedule" EntityType="ISSAModel.tbl_Mgr_WorkSchedule" />
+    <EntitySet Name="tbl_Mgr_WorkSchedule_Days" EntityType="ISSAModel.tbl_Mgr_WorkSchedule_Days" />
+    <EntitySet Name="tbl_Mgr_WorkSchedule_Employees" EntityType="ISSAModel.tbl_Mgr_WorkSchedule_Employees" />
+    <EntitySet Name="tbl_Op_Complaints" EntityType="ISSAModel.tbl_Op_Complaints" />
+    <EntitySet Name="tbl_Op_DailyLogs" EntityType="ISSAModel.tbl_Op_DailyLogs" />
+    <EntitySet Name="tbl_Op_DailyLogsCallLog" EntityType="ISSAModel.tbl_Op_DailyLogsCallLog" />
+    <EntitySet Name="tbl_Op_IncidentPersonsAffected" EntityType="ISSAModel.tbl_Op_IncidentPersonsAffected" />
+    <EntitySet Name="tbl_Ref_AbsentType" EntityType="ISSAModel.tbl_Ref_AbsentType" />
+    <EntitySet Name="tbl_Ref_Areas" EntityType="ISSAModel.tbl_Ref_Areas" />
+    <EntitySet Name="tbl_Ref_ComplaintChannel" EntityType="ISSAModel.tbl_Ref_ComplaintChannel" />
+    <EntitySet Name="tbl_Ref_Departments" EntityType="ISSAModel.tbl_Ref_Departments" />
+    <EntitySet Name="tbl_Ref_IncidentPersonAffectedType" EntityType="ISSAModel.tbl_Ref_IncidentPersonAffectedType" />
+    <EntitySet Name="tbl_Ref_IncidentTypes" EntityType="ISSAModel.tbl_Ref_IncidentTypes" />
+    <EntitySet Name="tbl_Ref_Locations" EntityType="ISSAModel.tbl_Ref_Locations" />
+    <EntitySet Name="tbl_Ref_Positions" EntityType="ISSAModel.tbl_Ref_Positions" />
+    <EntitySet Name="tbl_Ref_Regions" EntityType="ISSAModel.tbl_Ref_Regions" />
+    <EntitySet Name="tbl_Ref_Shifts" EntityType="ISSAModel.tbl_Ref_Shifts" />
+    <EntitySet Name="tbl_Ref_SickLeaveFor" EntityType="ISSAModel.tbl_Ref_SickLeaveFor" />
+    <EntitySet Name="tbl_Ref_WorkScheduleCategories" EntityType="ISSAModel.tbl_Ref_WorkScheduleCategories" />
+    <EntitySet Name="tbl_Sup_Employees" EntityType="ISSAModel.tbl_Sup_Employees" />
+    <EntitySet Name="tbl_Sup_ShiftReport" EntityType="ISSAModel.tbl_Sup_ShiftReport" />
+    <EntitySet Name="tbl_Sup_ShiftReportChecks" EntityType="ISSAModel.tbl_Sup_ShiftReportChecks" />
+    <EntitySet Name="tbl_Sup_ShiftReportChecks_Officers" EntityType="ISSAModel.tbl_Sup_ShiftReportChecks_Officers" />
+    <EntitySet Name="Users" EntityType="ISSAModel.User" />
+    <AssociationSet Name="MembershipApplication" Association="ISSAModel.MembershipApplication">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="Memberships" EntitySet="Memberships" />
+    </AssociationSet>
+    <AssociationSet Name="RoleApplication" Association="ISSAModel.RoleApplication">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="UserApplication" Association="ISSAModel.UserApplication">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="MembershipUser" Association="ISSAModel.MembershipUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Memberships" EntitySet="Memberships" />
+    </AssociationSet>
+    <AssociationSet Name="UserProfile" Association="ISSAModel.UserProfile">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Profiles" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_RolesSubLevel_tbl_RolesMasterLevel" Association="ISSAModel.FK_tbl_RolesSubLevel_tbl_RolesMasterLevel">
+      <End Role="tbl_Admin_RolesMasterLevel" EntitySet="tbl_Admin_RolesMasterLevel" />
+      <End Role="tbl_Admin_RolesSubLevel" EntitySet="tbl_Admin_RolesSubLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_User_Role_tbl_RolesSubLevel" Association="ISSAModel.FK_tbl_User_Role_tbl_RolesSubLevel">
+      <End Role="tbl_Admin_RolesSubLevel" EntitySet="tbl_Admin_RolesSubLevel" />
+      <End Role="tbl_Admin_User_Role" EntitySet="tbl_Admin_User_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_User_Role_tbl_Users" Association="ISSAModel.FK_tbl_User_Role_tbl_Users">
+      <End Role="tbl_Admin_Users" EntitySet="tbl_Admin_Users" />
+      <End Role="tbl_Admin_User_Role" EntitySet="tbl_Admin_User_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas" Association="ISSAModel.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Mgr_SpecialOperations" EntitySet="tbl_Mgr_SpecialOperations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations" Association="ISSAModel.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Mgr_SpecialOperations" EntitySet="tbl_Mgr_SpecialOperations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule" Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule">
+      <End Role="tbl_Mgr_WorkSchedule" EntitySet="tbl_Mgr_WorkSchedule" />
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts" Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Mgr_WorkSchedule" EntitySet="tbl_Mgr_WorkSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees" Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees">
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+      <End Role="tbl_Mgr_WorkSchedule_Days" EntitySet="tbl_Mgr_WorkSchedule_Days" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations" Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees" Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1" Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Ref_Areas" Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel" Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel">
+      <End Role="tbl_Ref_ComplaintChannel" EntitySet="tbl_Ref_ComplaintChannel" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1" Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1">
+      <End Role="tbl_Ref_ComplaintChannel" EntitySet="tbl_Ref_ComplaintChannel" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Ref_Locations" Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Sup_Employees" Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogs_tbl_Ref_Areas" Association="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogs_tbl_Ref_Locations" Association="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogs_tbl_Ref_Shifts" Association="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs" Association="ISSAModel.FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs">
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+      <End Role="tbl_Op_DailyLogsCallLog" EntitySet="tbl_Op_DailyLogsCallLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType" Association="ISSAModel.FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType">
+      <End Role="tbl_Ref_IncidentPersonAffectedType" EntitySet="tbl_Ref_IncidentPersonAffectedType" />
+      <End Role="tbl_Op_IncidentPersonsAffected" EntitySet="tbl_Op_IncidentPersonsAffected" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Ref_Locations_tbl_Ref_Areas" Association="ISSAModel.FK_tbl_Ref_Locations_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Areas" Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReport_tbl_Ref_Areas" Association="ISSAModel.FK_tbl_Sup_ShiftReport_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Sup_ShiftReport" EntitySet="tbl_Sup_ShiftReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Departments" Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Departments">
+      <End Role="tbl_Ref_Departments" EntitySet="tbl_Ref_Departments" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Ref_Locations_tbl_Ref_Regions" Association="ISSAModel.FK_tbl_Ref_Locations_tbl_Ref_Regions">
+      <End Role="tbl_Ref_Regions" EntitySet="tbl_Ref_Regions" />
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Locations" Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations" Association="ISSAModel.FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Sup_ShiftReportChecks" EntitySet="tbl_Sup_ShiftReportChecks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Ref_Shifts_tbl_Ref_Positions" Association="ISSAModel.FK_tbl_Ref_Shifts_tbl_Ref_Positions">
+      <End Role="tbl_Ref_Positions" EntitySet="tbl_Ref_Positions" />
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Positions" Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Positions">
+      <End Role="tbl_Ref_Positions" EntitySet="tbl_Ref_Positions" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Shifts" Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts" Association="ISSAModel.FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Sup_ShiftReport" EntitySet="tbl_Sup_ShiftReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees" Association="ISSAModel.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Sup_ShiftReportChecks_Officers" EntitySet="tbl_Sup_ShiftReportChecks_Officers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport" Association="ISSAModel.FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport">
+      <End Role="tbl_Sup_ShiftReport" EntitySet="tbl_Sup_ShiftReport" />
+      <End Role="tbl_Sup_ShiftReportChecks" EntitySet="tbl_Sup_ShiftReportChecks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks" Association="ISSAModel.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks">
+      <End Role="tbl_Sup_ShiftReportChecks" EntitySet="tbl_Sup_ShiftReportChecks" />
+      <End Role="tbl_Sup_ShiftReportChecks_Officers" EntitySet="tbl_Sup_ShiftReportChecks_Officers" />
+    </AssociationSet>
+    <AssociationSet Name="UsersInRoles" Association="ISSAModel.UsersInRoles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <FunctionImport Name="sp_Acknowledgement_Sel4DDL" ReturnType="Collection(ISSAModel.sp_Acknowledgement_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Area_Sel4DDL" ReturnType="Collection(ISSAModel.sp_Area_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_CallForwardedTo_Sel4DDL" ReturnType="Collection(ISSAModel.sp_CallForwardedTo_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_CallInOff_Search" ReturnType="Collection(ISSAModel.sp_CallInOff_Search_Result)">
+      <Parameter Name="ReportNumber" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="takenByID" Mode="In" Type="Int16" />
+      <Parameter Name="forwardedToID" Mode="In" Type="Int16" />
+      <Parameter Name="employeeID" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="sp_CallTakenBy_Sel4DDL" ReturnType="Collection(ISSAModel.sp_CallTakenBy_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_ComplaintMode_Sel4DDL" ReturnType="Collection(ISSAModel.sp_ComplaintMode_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_Complaints_Search" ReturnType="Collection(ISSAModel.sp_Complaints_Search_Result)">
+      <Parameter Name="ReportNumber" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="locationID" Mode="In" Type="Int16" />
+      <Parameter Name="channelID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_ActualPersonWorking_Select" ReturnType="Collection(ISSAModel.sp_DailyLog_ActualPersonWorking_Select_Result)">
+      <Parameter Name="dlID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_Audit_Select" ReturnType="Collection(ISSAModel.sp_DailyLog_Audit_Select_Result)">
+      <Parameter Name="dailyLogID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_CallLog_Select" ReturnType="Collection(ISSAModel.sp_DailyLog_CallLog_Select_Result)">
+      <Parameter Name="dailyLogID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_Doubles_Select" ReturnType="Collection(ISSAModel.sp_DailyLog_Doubles_Select_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="fromTime" Mode="In" Type="Time" />
+      <Parameter Name="toTime" Mode="In" Type="Time" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_Doubles_Select2" ReturnType="Collection(ISSAModel.sp_DailyLog_Doubles_Select2_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="fromTime" Mode="In" Type="Time" />
+      <Parameter Name="toTime" Mode="In" Type="Time" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_Doubles_SelectAllEmployees" ReturnType="Collection(ISSAModel.sp_DailyLog_Doubles_SelectAllEmployees_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_DoublesWorking_Select" ReturnType="Collection(ISSAModel.sp_DailyLog_DoublesWorking_Select_Result)">
+      <Parameter Name="dailyLogID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_LastCheckLocationAndTime" ReturnType="Collection(ISSAModel.sp_DailyLog_LastCheckLocationAndTime_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="shiftID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_LastCheckTime" ReturnType="Collection(ISSAModel.sp_DailyLog_LastCheckTime_Result)">
+      <Parameter Name="dailyLogID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_PersonWorking_Select" ReturnType="Collection(ISSAModel.sp_DailyLog_PersonWorking_Select_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="locationID" Mode="In" Type="Int16" />
+      <Parameter Name="shiftID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_Search" ReturnType="Collection(ISSAModel.sp_DailyLog_Search_Result)">
+      <Parameter Name="ReportNumber" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="locationID" Mode="In" Type="Int16" />
+      <Parameter Name="shiftID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_Switches_Select" ReturnType="Collection(ISSAModel.sp_DailyLog_Switches_Select_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="locationID" Mode="In" Type="Int16" />
+      <Parameter Name="shiftID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_DailyLog_SwitchesWorking_Select" ReturnType="Collection(ISSAModel.sp_DailyLog_SwitchesWorking_Select_Result)">
+      <Parameter Name="dlID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Department_Sel4DDL" ReturnType="Collection(ISSAModel.sp_Department_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Employee_Search" ReturnType="Collection(ISSAModel.sp_Employee_Search_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="departmentID" Mode="In" Type="Byte" />
+      <Parameter Name="positionID" Mode="In" Type="Byte" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="locationID" Mode="In" Type="Int16" />
+      <Parameter Name="shiftID" Mode="In" Type="Byte" />
+      <Parameter Name="isStandByStaff" Mode="In" Type="Boolean" />
+      <Parameter Name="isActive" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Employee_Sel4DDL" ReturnType="Collection(ISSAModel.sp_Employee_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_Employee_Sel4DDL_ByPositionID" ReturnType="Collection(ISSAModel.sp_Employee_Sel4DDL_ByPositionID_Result)">
+      <Parameter Name="positionID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Employee_SelectDayOffs" ReturnType="Collection(String)">
+      <Parameter Name="WorkScheduleEmployeeID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Employee_SelectForWorkSchedule" ReturnType="Collection(ISSAModel.sp_Employee_SelectForWorkSchedule_Result)">
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="shiftID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Employee_SelectFromWorkSchedule" ReturnType="Collection(ISSAModel.sp_Employee_SelectFromWorkSchedule_Result)">
+      <Parameter Name="workScheduleID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Employee_UnscheduledSelectForWorkSchedule" ReturnType="Collection(ISSAModel.sp_Employee_UnscheduledSelectForWorkSchedule_Result)">
+      <Parameter Name="wsID" Mode="In" Type="Int32" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="shiftID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FilterHistory" ReturnType="Collection(ISSAModel.sp_FilterHistory_Result)">
+      <Parameter Name="UserID" Mode="In" Type="Byte" />
+      <Parameter Name="from" Mode="In" Type="DateTime" />
+      <Parameter Name="to" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ISSAModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ISSAModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Incidents_Search" ReturnType="Collection(ISSAModel.sp_Incidents_Search_Result)">
+      <Parameter Name="ReportNumber" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="locationID" Mode="In" Type="Int16" />
+      <Parameter Name="incidentTypeID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_IncidentType_Sel4DDL" ReturnType="Collection(ISSAModel.sp_IncidentType_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_Location_Sel4DDL_ByAreaID" ReturnType="Collection(ISSAModel.sp_Location_Sel4DDL_ByAreaID_Result)">
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Operators_Sel4DDL" ReturnType="Collection(ISSAModel.sp_Operators_Sel4DDL_Result)">
+      <Parameter Name="positionID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Position_Sel4DDL" ReturnType="Collection(ISSAModel.sp_Position_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RPT_WorkSchedule" ReturnType="Collection(ISSAModel.sp_RPT_WorkSchedule_Result)">
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="month" Mode="In" Type="String" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="shiftID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Shift_Sel4DDL" ReturnType="Collection(ISSAModel.sp_Shift_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_Shift_Sel4DDL_ByPositionID" ReturnType="Collection(ISSAModel.sp_Shift_Sel4DDL_ByPositionID_Result)">
+      <Parameter Name="positionID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Shift_Sel4DDL_ByPositionIDAndTime" ReturnType="Collection(ISSAModel.sp_Shift_Sel4DDL_ByPositionIDAndTime_Result)">
+      <Parameter Name="positionID" Mode="In" Type="Byte" />
+      <Parameter Name="currentTime" Mode="In" Type="Time" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Shift_Sel4TAB_ByPositionID" ReturnType="Collection(ISSAModel.sp_Shift_Sel4TAB_ByPositionID_Result)">
+      <Parameter Name="positionID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ShiftReports_Search" ReturnType="Collection(ISSAModel.sp_ShiftReports_Search_Result)">
+      <Parameter Name="ReportNumber" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="supervisorID" Mode="In" Type="Int16" />
+      <Parameter Name="shiftID" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="sp_SickLeaveFor_Sel4DDL" ReturnType="Collection(ISSAModel.sp_SickLeaveFor_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_SpecialOperations_Search" ReturnType="Collection(ISSAModel.sp_SpecialOperations_Search_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="areaID" Mode="In" Type="Byte" />
+      <Parameter Name="locationID" Mode="In" Type="Int16" />
+      <Parameter Name="escortService" Mode="In" Type="Boolean" />
+      <Parameter Name="citInGT" Mode="In" Type="Boolean" />
+      <Parameter Name="citOutGT" Mode="In" Type="Boolean" />
+      <Parameter Name="extraOfficers" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StandByEmployee_Sel4DDL" ReturnType="Collection(ISSAModel.sp_StandByEmployee_Sel4DDL_Result)" />
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="sp_WorkSchedule_AuditSelect" ReturnType="Collection(ISSAModel.sp_WorkSchedule_AuditSelect_Result)">
+      <Parameter Name="wsID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Sup_DailyMasterRoster" EntityType="ISSAModel.tbl_Sup_DailyMasterRoster" />
+    <FunctionImport Name="sp_Employee_Sel4DDL_2" ReturnType="Collection(ISSAModel.sp_Employee_Sel4DDL_2_Result)" />
+    <FunctionImport Name="sp_FilterUsers" ReturnType="Collection(ISSAModel.sp_FilterUsers_Result)">
+      <Parameter Name="role" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="active" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Sup_DailyPostAssignment" EntityType="ISSAModel.tbl_Sup_DailyPostAssignment" />
+    <EntitySet Name="temptables" EntityType="ISSAModel.temptable" />
+    <AssociationSet Name="FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts" Association="ISSAModel.FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Sup_DailyPostAssignment" EntitySet="tbl_Sup_DailyPostAssignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment" Association="ISSAModel.FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment">
+      <End Role="tbl_Sup_DailyPostAssignment" EntitySet="tbl_Sup_DailyPostAssignment" />
+      <End Role="tbl_Sup_DailyMasterRoster" EntitySet="tbl_Sup_DailyMasterRoster" />
+    </AssociationSet>
+    <EntitySet Name="tbl_Op_DailyLogsPersonWorking" EntityType="ISSAModel.tbl_Op_DailyLogsPersonWorking" />
+    <AssociationSet Name="FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs" Association="ISSAModel.FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs">
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+      <End Role="tbl_Op_DailyLogsPersonWorking" EntitySet="tbl_Op_DailyLogsPersonWorking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees" Association="ISSAModel.FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_DailyLogsPersonWorking" EntitySet="tbl_Op_DailyLogsPersonWorking" />
+    </AssociationSet>
+    <EntitySet Name="tbl_Mgr_WeeklySecurityReport" EntityType="ISSAModel.tbl_Mgr_WeeklySecurityReport" />
+    <AssociationSet Name="FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas" Association="ISSAModel.FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Mgr_WeeklySecurityReport" EntitySet="tbl_Mgr_WeeklySecurityReport" />
+    </AssociationSet>
+    <EntitySet Name="tbl_Mgr_WeeklySecurityReportComparison" EntityType="ISSAModel.tbl_Mgr_WeeklySecurityReportComparison" />
+    <AssociationSet Name="FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport" Association="ISSAModel.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport">
+      <End Role="tbl_Mgr_WeeklySecurityReport" EntitySet="tbl_Mgr_WeeklySecurityReport" />
+      <End Role="tbl_Mgr_WeeklySecurityReportComparison" EntitySet="tbl_Mgr_WeeklySecurityReportComparison" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts" Association="ISSAModel.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Mgr_WeeklySecurityReportComparison" EntitySet="tbl_Mgr_WeeklySecurityReportComparison" />
+    </AssociationSet>
+    <EntitySet Name="tbl_Mgr_DateTimeGrant" EntityType="ISSAModel.tbl_Mgr_DateTimeGrant" />
+    <EntitySet Name="tbl_Reports" EntityType="ISSAModel.tbl_Reports" />
+    <EntitySet Name="tbl_ReportsRole" EntityType="ISSAModel.tbl_ReportsRole" />
+    <EntitySet Name="tbl_Op_Incidents" EntityType="ISSAModel.tbl_Op_Incidents" />
+    <AssociationSet Name="FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents" Association="ISSAModel.FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents">
+      <End Role="tbl_Op_Incidents" EntitySet="tbl_Op_Incidents" />
+      <End Role="tbl_Op_IncidentPersonsAffected" EntitySet="tbl_Op_IncidentPersonsAffected" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Incidents_tbl_Ref_Areas" Association="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Op_Incidents" EntitySet="tbl_Op_Incidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes" Association="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes">
+      <End Role="tbl_Ref_IncidentTypes" EntitySet="tbl_Ref_IncidentTypes" />
+      <End Role="tbl_Op_Incidents" EntitySet="tbl_Op_Incidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Incidents_tbl_Ref_Locations" Association="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Op_Incidents" EntitySet="tbl_Op_Incidents" />
+    </AssociationSet>
+    <EntitySet Name="tbl_Op_CallIn_Absent" EntityType="ISSAModel.tbl_Op_CallIn_Absent" />
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType" Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType">
+      <End Role="tbl_Ref_AbsentType" EntitySet="tbl_Ref_AbsentType" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor" Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor">
+      <End Role="tbl_Ref_SickLeaveFor" EntitySet="tbl_Ref_SickLeaveFor" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees" Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1" Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2" Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="235" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Memberships" Relationship="ISSAModel.MembershipApplication" FromRole="Applications" ToRole="Memberships" />
+    <NavigationProperty Name="Roles" Relationship="ISSAModel.RoleApplication" FromRole="Applications" ToRole="Roles" />
+    <NavigationProperty Name="Users" Relationship="ISSAModel.UserApplication" FromRole="Applications" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowsStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Application" Relationship="ISSAModel.MembershipApplication" FromRole="Memberships" ToRole="Applications" />
+    <NavigationProperty Name="User" Relationship="ISSAModel.MembershipUser" FromRole="Memberships" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValueStrings" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValueBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="User" Relationship="ISSAModel.UserProfile" FromRole="Profiles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Application" Relationship="ISSAModel.RoleApplication" FromRole="Roles" ToRole="Applications" />
+    <NavigationProperty Name="Users" Relationship="ISSAModel.UsersInRoles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbl_Admin_RolesMasterLevel">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleTitle" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="RoleDescription" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Admin_RolesSubLevel" Relationship="ISSAModel.FK_tbl_RolesSubLevel_tbl_RolesMasterLevel" FromRole="tbl_Admin_RolesMasterLevel" ToRole="tbl_Admin_RolesSubLevel" />
+  </EntityType>
+  <EntityType Name="tbl_Admin_RolesSubLevel">
+    <Key>
+      <PropertyRef Name="RoleSubLevelID" />
+    </Key>
+    <Property Name="RoleSubLevelID" Type="Int16" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="Byte" />
+    <Property Name="RoleTitle" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="RoleDescription" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Admin_RolesMasterLevel" Relationship="ISSAModel.FK_tbl_RolesSubLevel_tbl_RolesMasterLevel" FromRole="tbl_Admin_RolesSubLevel" ToRole="tbl_Admin_RolesMasterLevel" />
+    <NavigationProperty Name="tbl_Admin_User_Role" Relationship="ISSAModel.FK_tbl_User_Role_tbl_RolesSubLevel" FromRole="tbl_Admin_RolesSubLevel" ToRole="tbl_Admin_User_Role" />
+  </EntityType>
+  <EntityType Name="tbl_Admin_User_Role">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserRoleID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Byte" />
+    <Property Name="RoleSubLevelID" Type="Int16" />
+    <Property Name="Createdby" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Admin_RolesSubLevel" Relationship="ISSAModel.FK_tbl_User_Role_tbl_RolesSubLevel" FromRole="tbl_Admin_User_Role" ToRole="tbl_Admin_RolesSubLevel" />
+    <NavigationProperty Name="tbl_Admin_Users" Relationship="ISSAModel.FK_tbl_User_Role_tbl_Users" FromRole="tbl_Admin_User_Role" ToRole="tbl_Admin_Users" />
+  </EntityType>
+  <EntityType Name="tbl_Admin_Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeID" Type="Int16" />
+    <Property Name="ResetRequired" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Admin_User_Role" Relationship="ISSAModel.FK_tbl_User_Role_tbl_Users" FromRole="tbl_Admin_Users" ToRole="tbl_Admin_User_Role" />
+  </EntityType>
+  <EntityType Name="tbl_AuditLog">
+    <Key>
+      <PropertyRef Name="AuditLogID" />
+    </Key>
+    <Property Name="AuditLogID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SourceID" Type="Int32" />
+    <Property Name="TableName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AuditProcess" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="UserID" Type="Byte" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_SpecialOperations">
+    <Key>
+      <PropertyRef Name="SpecialOperationsID" />
+    </Key>
+    <Property Name="SpecialOperationsID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="Byte" />
+    <Property Name="LocationID" Type="Int16" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="EscortService" Type="Boolean" />
+    <Property Name="CashInGT" Type="Boolean" />
+    <Property Name="CashOutGT" Type="Boolean" />
+    <Property Name="ExtraOfficers" Type="Boolean" />
+    <Property Name="AmountOfficers" Type="Byte" />
+    <Property Name="Comments" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="ReportNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Areas" Relationship="ISSAModel.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas" FromRole="tbl_Mgr_SpecialOperations" ToRole="tbl_Ref_Areas" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations" FromRole="tbl_Mgr_SpecialOperations" ToRole="tbl_Ref_Locations" />
+    <Property Type="Byte" Name="ShiftID" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_WorkSchedule">
+    <Key>
+      <PropertyRef Name="WorkScheduleID" />
+    </Key>
+    <Property Name="WorkScheduleID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="Byte" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Month" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="ShiftID" Type="Byte" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Mgr_WorkSchedule_Employees" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule" FromRole="tbl_Mgr_WorkSchedule" ToRole="tbl_Mgr_WorkSchedule_Employees" />
+    <NavigationProperty Name="tbl_Ref_Shifts" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts" FromRole="tbl_Mgr_WorkSchedule" ToRole="tbl_Ref_Shifts" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_WorkSchedule_Days">
+    <Key>
+      <PropertyRef Name="WorkScheduleDateID" />
+    </Key>
+    <Property Name="WorkScheduleDateID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkScheduleEmployeeID" Type="Int64" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="IsDayOff" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Mgr_WorkSchedule_Employees" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees" FromRole="tbl_Mgr_WorkSchedule_Days" ToRole="tbl_Mgr_WorkSchedule_Employees" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_WorkSchedule_Employees">
+    <Key>
+      <PropertyRef Name="WorkScheduleEmployeeID" />
+    </Key>
+    <Property Name="WorkScheduleEmployeeID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkScheduleID" Type="Int32" />
+    <Property Name="EmployeeID" Type="Int16" />
+    <Property Name="LocationID" Type="Int16" />
+    <Property Name="StandyByEmployeeID" Type="Int16" />
+    <Property Name="IsComplete" Type="Boolean" />
+    <Property Name="Exclude" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsTransfer" Type="Boolean" />
+    <Property Name="WasUnscheduled" Type="Boolean" />
+    <Property Name="Comments" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tbl_Mgr_WorkSchedule" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule" FromRole="tbl_Mgr_WorkSchedule_Employees" ToRole="tbl_Mgr_WorkSchedule" />
+    <NavigationProperty Name="tbl_Mgr_WorkSchedule_Days" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees" FromRole="tbl_Mgr_WorkSchedule_Employees" ToRole="tbl_Mgr_WorkSchedule_Days" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations" FromRole="tbl_Mgr_WorkSchedule_Employees" ToRole="tbl_Ref_Locations" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees" FromRole="tbl_Mgr_WorkSchedule_Employees" ToRole="tbl_Sup_Employees" />
+    <NavigationProperty Name="tbl_Sup_Employees1" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1" FromRole="tbl_Mgr_WorkSchedule_Employees" ToRole="tbl_Sup_Employees" />
+  </EntityType>
+  <EntityType Name="tbl_Op_Complaints">
+    <Key>
+      <PropertyRef Name="ComplaintID" />
+    </Key>
+    <Property Name="ComplaintID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ComplaintNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ComplaintChannelID" Type="Byte" />
+    <Property Name="PersonMakingReport" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="AreaID" Type="Byte" />
+    <Property Name="LocationID" Type="Int16" />
+    <Property Name="DateOfIncident" Type="DateTime" Precision="0" />
+    <Property Name="TimeOfIncident" Type="Time" Precision="7" />
+    <Property Name="ReceivedByID" Type="Int16" />
+    <Property Name="DateReceived" Type="DateTime" Precision="0" />
+    <Property Name="AcknowledgementID" Type="Byte" />
+    <Property Name="ClientComplaint" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+    <Property Name="FeedbackProvided" Type="Boolean" />
+    <Property Name="DateOfFeedback" Type="DateTime" Precision="0" />
+    <Property Name="ActionTaken" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Areas" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_Areas" FromRole="tbl_Op_Complaints" ToRole="tbl_Ref_Areas" />
+    <NavigationProperty Name="tbl_Ref_ComplaintChannel" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel" FromRole="tbl_Op_Complaints" ToRole="tbl_Ref_ComplaintChannel" />
+    <NavigationProperty Name="tbl_Ref_ComplaintChannel1" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1" FromRole="tbl_Op_Complaints" ToRole="tbl_Ref_ComplaintChannel" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_Locations" FromRole="tbl_Op_Complaints" ToRole="tbl_Ref_Locations" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Sup_Employees" FromRole="tbl_Op_Complaints" ToRole="tbl_Sup_Employees" />
+    <Property Type="Byte" Name="ShiftID" />
+  </EntityType>
+  <EntityType Name="tbl_Op_DailyLogs">
+    <Key>
+      <PropertyRef Name="DailyLogID" />
+    </Key>
+    <Property Name="DailyLogID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="AreaID" Type="Byte" />
+    <Property Name="LocationID" Type="Int16" />
+    <Property Name="ShiftID" Type="Byte" />
+    <Property Name="LogNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="WorkScheduleID" Type="Int32" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Areas" Relationship="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Areas" FromRole="tbl_Op_DailyLogs" ToRole="tbl_Ref_Areas" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Locations" FromRole="tbl_Op_DailyLogs" ToRole="tbl_Ref_Locations" />
+    <NavigationProperty Name="tbl_Ref_Shifts" Relationship="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Shifts" FromRole="tbl_Op_DailyLogs" ToRole="tbl_Ref_Shifts" />
+    <NavigationProperty Name="tbl_Op_DailyLogsCallLog" Relationship="ISSAModel.FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs" FromRole="tbl_Op_DailyLogs" ToRole="tbl_Op_DailyLogsCallLog" />
+    <NavigationProperty Name="tbl_Op_DailyLogsPersonWorking" Relationship="ISSAModel.FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs" FromRole="tbl_Op_DailyLogs" ToRole="tbl_Op_DailyLogsPersonWorking" />
+  </EntityType>
+  <EntityType Name="tbl_Op_DailyLogsCallLog">
+    <Key>
+      <PropertyRef Name="CallLogID" />
+    </Key>
+    <Property Name="CallLogID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DailyLogID" Type="Int32" />
+    <Property Name="Time" Type="Time" Precision="7" />
+    <Property Name="Reports" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+    <Property Name="SupCheckLocation" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Op_DailyLogs" Relationship="ISSAModel.FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs" FromRole="tbl_Op_DailyLogsCallLog" ToRole="tbl_Op_DailyLogs" />
+  </EntityType>
+  <EntityType Name="tbl_Op_IncidentPersonsAffected">
+    <Key>
+      <PropertyRef Name="PersonAffectedID" />
+    </Key>
+    <Property Name="PersonAffectedID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="AffectedTypeID" Type="Byte" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="OtherTypeDescription" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="IncidentID" Type="Int32" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_IncidentPersonAffectedType" Relationship="ISSAModel.FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType" FromRole="tbl_Op_IncidentPersonsAffected" ToRole="tbl_Ref_IncidentPersonAffectedType" />
+    <NavigationProperty Name="tbl_Op_Incidents" Relationship="ISSAModel.FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents" FromRole="tbl_Op_IncidentPersonsAffected" ToRole="tbl_Op_Incidents" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_AbsentType">
+    <Key>
+      <PropertyRef Name="AbsentTypeID" />
+    </Key>
+    <Property Name="AbsentTypeID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Seq" Type="Byte" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Type="Boolean" Name="IsForDayOff" />
+    <NavigationProperty Name="tbl_Op_CallIn_Absent" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType" FromRole="tbl_Ref_AbsentType" ToRole="tbl_Op_CallIn_Absent" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Areas">
+    <Key>
+      <PropertyRef Name="AreaID" />
+    </Key>
+    <Property Name="AreaID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Area" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Seq" Type="Byte" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Mgr_SpecialOperations" Relationship="ISSAModel.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas" FromRole="tbl_Ref_Areas" ToRole="tbl_Mgr_SpecialOperations" />
+    <NavigationProperty Name="tbl_Op_Complaints" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_Areas" FromRole="tbl_Ref_Areas" ToRole="tbl_Op_Complaints" />
+    <NavigationProperty Name="tbl_Op_DailyLogs" Relationship="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Areas" FromRole="tbl_Ref_Areas" ToRole="tbl_Op_DailyLogs" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Ref_Locations_tbl_Ref_Areas" FromRole="tbl_Ref_Areas" ToRole="tbl_Ref_Locations" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Areas" FromRole="tbl_Ref_Areas" ToRole="tbl_Sup_Employees" />
+    <NavigationProperty Name="tbl_Sup_ShiftReport" Relationship="ISSAModel.FK_tbl_Sup_ShiftReport_tbl_Ref_Areas" FromRole="tbl_Ref_Areas" ToRole="tbl_Sup_ShiftReport" />
+    <NavigationProperty Name="tbl_Mgr_WeeklySecurityReport" Relationship="ISSAModel.FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas" FromRole="tbl_Ref_Areas" ToRole="tbl_Mgr_WeeklySecurityReport" />
+    <NavigationProperty Name="tbl_Op_Incidents" Relationship="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_Areas" FromRole="tbl_Ref_Areas" ToRole="tbl_Op_Incidents" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_ComplaintChannel">
+    <Key>
+      <PropertyRef Name="ComplaintChannelID" />
+    </Key>
+    <Property Name="ComplaintChannelID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Channel" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="IsComplaintsMade" Type="Boolean" />
+    <Property Name="IsAcknowledgement" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Op_Complaints" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel" FromRole="tbl_Ref_ComplaintChannel" ToRole="tbl_Op_Complaints" />
+    <NavigationProperty Name="tbl_Op_Complaints1" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1" FromRole="tbl_Ref_ComplaintChannel" ToRole="tbl_Op_Complaints" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Departments">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Departments" FromRole="tbl_Ref_Departments" ToRole="tbl_Sup_Employees" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_IncidentPersonAffectedType">
+    <Key>
+      <PropertyRef Name="AffectedTypeID" />
+    </Key>
+    <Property Name="AffectedTypeID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Seq" Type="Byte" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Op_IncidentPersonsAffected" Relationship="ISSAModel.FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType" FromRole="tbl_Ref_IncidentPersonAffectedType" ToRole="tbl_Op_IncidentPersonsAffected" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_IncidentTypes">
+    <Key>
+      <PropertyRef Name="IncidentTypeID" />
+    </Key>
+    <Property Name="IncidentTypeID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IncidentType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Seq" Type="Byte" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Op_Incidents" Relationship="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes" FromRole="tbl_Ref_IncidentTypes" ToRole="tbl_Op_Incidents" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Locations">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="Int16" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="Byte" />
+    <Property Name="LocationName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AddressLineOne" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AddressLineTwo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="RegionID" Type="Byte" />
+    <Property Name="ContactNumberOne" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNumberTwo" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Mgr_SpecialOperations" Relationship="ISSAModel.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations" FromRole="tbl_Ref_Locations" ToRole="tbl_Mgr_SpecialOperations" />
+    <NavigationProperty Name="tbl_Mgr_WorkSchedule_Employees" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations" FromRole="tbl_Ref_Locations" ToRole="tbl_Mgr_WorkSchedule_Employees" />
+    <NavigationProperty Name="tbl_Op_Complaints" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_Locations" FromRole="tbl_Ref_Locations" ToRole="tbl_Op_Complaints" />
+    <NavigationProperty Name="tbl_Op_DailyLogs" Relationship="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Locations" FromRole="tbl_Ref_Locations" ToRole="tbl_Op_DailyLogs" />
+    <NavigationProperty Name="tbl_Ref_Areas" Relationship="ISSAModel.FK_tbl_Ref_Locations_tbl_Ref_Areas" FromRole="tbl_Ref_Locations" ToRole="tbl_Ref_Areas" />
+    <NavigationProperty Name="tbl_Ref_Regions" Relationship="ISSAModel.FK_tbl_Ref_Locations_tbl_Ref_Regions" FromRole="tbl_Ref_Locations" ToRole="tbl_Ref_Regions" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Locations" FromRole="tbl_Ref_Locations" ToRole="tbl_Sup_Employees" />
+    <NavigationProperty Name="tbl_Sup_ShiftReportChecks" Relationship="ISSAModel.FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations" FromRole="tbl_Ref_Locations" ToRole="tbl_Sup_ShiftReportChecks" />
+    <NavigationProperty Name="tbl_Op_Incidents" Relationship="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_Locations" FromRole="tbl_Ref_Locations" ToRole="tbl_Op_Incidents" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Positions">
+    <Key>
+      <PropertyRef Name="PositionID" />
+    </Key>
+    <Property Name="PositionID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PositionName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Shifts" Relationship="ISSAModel.FK_tbl_Ref_Shifts_tbl_Ref_Positions" FromRole="tbl_Ref_Positions" ToRole="tbl_Ref_Shifts" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Positions" FromRole="tbl_Ref_Positions" ToRole="tbl_Sup_Employees" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Regions">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionNumber" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="RegionName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Ref_Locations_tbl_Ref_Regions" FromRole="tbl_Ref_Regions" ToRole="tbl_Ref_Locations" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Shifts">
+    <Key>
+      <PropertyRef Name="ShiftID" />
+    </Key>
+    <Property Name="ShiftID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PositionID" Type="Byte" />
+    <Property Name="FromTime" Type="Time" Precision="7" />
+    <Property Name="ToTime" Type="Time" Precision="7" />
+    <Property Name="HoursInShift" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="IsDay" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Mgr_WorkSchedule" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts" FromRole="tbl_Ref_Shifts" ToRole="tbl_Mgr_WorkSchedule" />
+    <NavigationProperty Name="tbl_Op_DailyLogs" Relationship="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Shifts" FromRole="tbl_Ref_Shifts" ToRole="tbl_Op_DailyLogs" />
+    <NavigationProperty Name="tbl_Ref_Positions" Relationship="ISSAModel.FK_tbl_Ref_Shifts_tbl_Ref_Positions" FromRole="tbl_Ref_Shifts" ToRole="tbl_Ref_Positions" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Shifts" FromRole="tbl_Ref_Shifts" ToRole="tbl_Sup_Employees" />
+    <NavigationProperty Name="tbl_Sup_ShiftReport" Relationship="ISSAModel.FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts" FromRole="tbl_Ref_Shifts" ToRole="tbl_Sup_ShiftReport" />
+    <NavigationProperty Name="tbl_Sup_DailyPostAssignment" Relationship="ISSAModel.FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts" FromRole="tbl_Ref_Shifts" ToRole="tbl_Sup_DailyPostAssignment" />
+    <NavigationProperty Name="tbl_Mgr_WeeklySecurityReportComparison" Relationship="ISSAModel.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts" FromRole="tbl_Ref_Shifts" ToRole="tbl_Mgr_WeeklySecurityReportComparison" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_SickLeaveFor">
+    <Key>
+      <PropertyRef Name="SickLeaveForID" />
+    </Key>
+    <Property Name="SickLeaveForID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="LeaveFor" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Seq" Type="Byte" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Op_CallIn_Absent" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor" FromRole="tbl_Ref_SickLeaveFor" ToRole="tbl_Op_CallIn_Absent" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_WorkScheduleCategories">
+    <Key>
+      <PropertyRef Name="WorkScheduleCategorieID" />
+    </Key>
+    <Property Name="WorkScheduleCategorieID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int16" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OtherName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="DateHired" Type="DateTime" Precision="0" />
+    <Property Name="AreaID" Type="Byte" />
+    <Property Name="LocationID" Type="Int16" />
+    <Property Name="DepartmentID" Type="Byte" />
+    <Property Name="PositionID" Type="Byte" />
+    <Property Name="ShiftID" Type="Byte" />
+    <Property Name="UID" Type="Byte" />
+    <Property Name="ResetNeeded" Type="Boolean" />
+    <Property Name="IsStandbyStaff" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="EmployeeNumber" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Mgr_WorkSchedule_Employees" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees" FromRole="tbl_Sup_Employees" ToRole="tbl_Mgr_WorkSchedule_Employees" />
+    <NavigationProperty Name="tbl_Mgr_WorkSchedule_Employees1" Relationship="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1" FromRole="tbl_Sup_Employees" ToRole="tbl_Mgr_WorkSchedule_Employees" />
+    <NavigationProperty Name="tbl_Op_Complaints" Relationship="ISSAModel.FK_tbl_Op_Complaints_tbl_Sup_Employees" FromRole="tbl_Sup_Employees" ToRole="tbl_Op_Complaints" />
+    <NavigationProperty Name="tbl_Ref_Areas" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Areas" FromRole="tbl_Sup_Employees" ToRole="tbl_Ref_Areas" />
+    <NavigationProperty Name="tbl_Ref_Departments" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Departments" FromRole="tbl_Sup_Employees" ToRole="tbl_Ref_Departments" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Locations" FromRole="tbl_Sup_Employees" ToRole="tbl_Ref_Locations" />
+    <NavigationProperty Name="tbl_Ref_Positions" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Positions" FromRole="tbl_Sup_Employees" ToRole="tbl_Ref_Positions" />
+    <NavigationProperty Name="tbl_Ref_Shifts" Relationship="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Shifts" FromRole="tbl_Sup_Employees" ToRole="tbl_Ref_Shifts" />
+    <NavigationProperty Name="tbl_Sup_ShiftReportChecks_Officers" Relationship="ISSAModel.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees" FromRole="tbl_Sup_Employees" ToRole="tbl_Sup_ShiftReportChecks_Officers" />
+    <Property Type="Boolean" Name="IsEmployee" />
+    <NavigationProperty Name="tbl_Op_DailyLogsPersonWorking" Relationship="ISSAModel.FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees" FromRole="tbl_Sup_Employees" ToRole="tbl_Op_DailyLogsPersonWorking" />
+    <NavigationProperty Name="tbl_Op_CallIn_Absent" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees" FromRole="tbl_Sup_Employees" ToRole="tbl_Op_CallIn_Absent" />
+    <NavigationProperty Name="tbl_Op_CallIn_Absent1" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1" FromRole="tbl_Sup_Employees" ToRole="tbl_Op_CallIn_Absent" />
+    <NavigationProperty Name="tbl_Op_CallIn_Absent2" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2" FromRole="tbl_Sup_Employees" ToRole="tbl_Op_CallIn_Absent" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_ShiftReport">
+    <Key>
+      <PropertyRef Name="ShiftReportID" />
+    </Key>
+    <Property Name="ShiftReportID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="AreaID" Type="Byte" />
+    <Property Name="ShiftID" Type="Byte" />
+    <Property Name="SupervisorID" Type="Int16" />
+    <Property Name="ReportNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Areas" Relationship="ISSAModel.FK_tbl_Sup_ShiftReport_tbl_Ref_Areas" FromRole="tbl_Sup_ShiftReport" ToRole="tbl_Ref_Areas" />
+    <NavigationProperty Name="tbl_Ref_Shifts" Relationship="ISSAModel.FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts" FromRole="tbl_Sup_ShiftReport" ToRole="tbl_Ref_Shifts" />
+    <NavigationProperty Name="tbl_Sup_ShiftReportChecks" Relationship="ISSAModel.FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport" FromRole="tbl_Sup_ShiftReport" ToRole="tbl_Sup_ShiftReportChecks" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_ShiftReportChecks">
+    <Key>
+      <PropertyRef Name="ChecksID" />
+    </Key>
+    <Property Name="ChecksID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ShiftReportID" Type="Int32" />
+    <Property Name="LocationID" Type="Int16" />
+    <Property Name="CheckSequence" Type="Byte" />
+    <Property Name="GeneralObservations" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+    <Property Name="CorrectionsMadeSuggested" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations" FromRole="tbl_Sup_ShiftReportChecks" ToRole="tbl_Ref_Locations" />
+    <NavigationProperty Name="tbl_Sup_ShiftReport" Relationship="ISSAModel.FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport" FromRole="tbl_Sup_ShiftReportChecks" ToRole="tbl_Sup_ShiftReport" />
+    <NavigationProperty Name="tbl_Sup_ShiftReportChecks_Officers" Relationship="ISSAModel.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks" FromRole="tbl_Sup_ShiftReportChecks" ToRole="tbl_Sup_ShiftReportChecks_Officers" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_ShiftReportChecks_Officers">
+    <Key>
+      <PropertyRef Name="ShiftReportChecksOfficerID" />
+    </Key>
+    <Property Name="ShiftReportChecksOfficerID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ChecksID" Type="Int64" />
+    <Property Name="EmployeeID" Type="Int16" />
+    <Property Name="Time" Type="Time" Precision="7" />
+    <Property Name="CreatedBy" Type="Byte" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Byte" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees" FromRole="tbl_Sup_ShiftReportChecks_Officers" ToRole="tbl_Sup_Employees" />
+    <NavigationProperty Name="tbl_Sup_ShiftReportChecks" Relationship="ISSAModel.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks" FromRole="tbl_Sup_ShiftReportChecks_Officers" ToRole="tbl_Sup_ShiftReportChecks" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UID" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Application" Relationship="ISSAModel.UserApplication" FromRole="Users" ToRole="Applications" />
+    <NavigationProperty Name="Membership" Relationship="ISSAModel.MembershipUser" FromRole="Users" ToRole="Memberships" />
+    <NavigationProperty Name="Profile" Relationship="ISSAModel.UserProfile" FromRole="Users" ToRole="Profiles" />
+    <NavigationProperty Name="Roles" Relationship="ISSAModel.UsersInRoles" FromRole="Users" ToRole="Roles" />
+  </EntityType>
+  <Association Name="MembershipApplication">
+    <End Role="Applications" Type="ISSAModel.Application" Multiplicity="1" />
+    <End Role="Memberships" Type="ISSAModel.Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Memberships">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RoleApplication">
+    <End Role="Applications" Type="ISSAModel.Application" Multiplicity="1" />
+    <End Role="Roles" Type="ISSAModel.Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserApplication">
+    <End Role="Applications" Type="ISSAModel.Application" Multiplicity="1" />
+    <End Role="Users" Type="ISSAModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MembershipUser">
+    <End Role="Users" Type="ISSAModel.User" Multiplicity="1" />
+    <End Role="Memberships" Type="ISSAModel.Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Memberships">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserProfile">
+    <End Role="Users" Type="ISSAModel.User" Multiplicity="1" />
+    <End Role="Profiles" Type="ISSAModel.Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Profiles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_RolesSubLevel_tbl_RolesMasterLevel">
+    <End Role="tbl_Admin_RolesMasterLevel" Type="ISSAModel.tbl_Admin_RolesMasterLevel" Multiplicity="0..1" />
+    <End Role="tbl_Admin_RolesSubLevel" Type="ISSAModel.tbl_Admin_RolesSubLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Admin_RolesMasterLevel">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="tbl_Admin_RolesSubLevel">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_User_Role_tbl_RolesSubLevel">
+    <End Role="tbl_Admin_RolesSubLevel" Type="ISSAModel.tbl_Admin_RolesSubLevel" Multiplicity="0..1" />
+    <End Role="tbl_Admin_User_Role" Type="ISSAModel.tbl_Admin_User_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Admin_RolesSubLevel">
+        <PropertyRef Name="RoleSubLevelID" />
+      </Principal>
+      <Dependent Role="tbl_Admin_User_Role">
+        <PropertyRef Name="RoleSubLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_User_Role_tbl_Users">
+    <End Role="tbl_Admin_Users" Type="ISSAModel.tbl_Admin_Users" Multiplicity="0..1" />
+    <End Role="tbl_Admin_User_Role" Type="ISSAModel.tbl_Admin_User_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Admin_Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="tbl_Admin_User_Role">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_SpecialOperations" Type="ISSAModel.tbl_Mgr_SpecialOperations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_SpecialOperations">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_SpecialOperations" Type="ISSAModel.tbl_Mgr_SpecialOperations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_SpecialOperations">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule">
+    <End Role="tbl_Mgr_WorkSchedule" Type="ISSAModel.tbl_Mgr_WorkSchedule" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.tbl_Mgr_WorkSchedule_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Mgr_WorkSchedule">
+        <PropertyRef Name="WorkScheduleID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="WorkScheduleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule" Type="ISSAModel.tbl_Mgr_WorkSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees">
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.tbl_Mgr_WorkSchedule_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Days" Type="ISSAModel.tbl_Mgr_WorkSchedule_Days" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="WorkScheduleEmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Days">
+        <PropertyRef Name="WorkScheduleEmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.tbl_Mgr_WorkSchedule_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.tbl_Mgr_WorkSchedule_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.tbl_Mgr_WorkSchedule_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="StandyByEmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel">
+    <End Role="tbl_Ref_ComplaintChannel" Type="ISSAModel.tbl_Ref_ComplaintChannel" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_ComplaintChannel">
+        <PropertyRef Name="ComplaintChannelID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="ComplaintChannelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1">
+    <End Role="tbl_Ref_ComplaintChannel" Type="ISSAModel.tbl_Ref_ComplaintChannel" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_ComplaintChannel">
+        <PropertyRef Name="ComplaintChannelID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="AcknowledgementID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Sup_Employees">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="ReceivedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogs_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.tbl_Op_DailyLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogs_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.tbl_Op_DailyLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogs_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.tbl_Op_DailyLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs">
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.tbl_Op_DailyLogs" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogsCallLog" Type="ISSAModel.tbl_Op_DailyLogsCallLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="DailyLogID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogsCallLog">
+        <PropertyRef Name="DailyLogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType">
+    <End Role="tbl_Ref_IncidentPersonAffectedType" Type="ISSAModel.tbl_Ref_IncidentPersonAffectedType" Multiplicity="0..1" />
+    <End Role="tbl_Op_IncidentPersonsAffected" Type="ISSAModel.tbl_Op_IncidentPersonsAffected" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_IncidentPersonAffectedType">
+        <PropertyRef Name="AffectedTypeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_IncidentPersonsAffected">
+        <PropertyRef Name="AffectedTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Ref_Locations_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.tbl_Ref_Locations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Ref_Locations">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReport_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReport" Type="ISSAModel.tbl_Sup_ShiftReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReport">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Departments">
+    <End Role="tbl_Ref_Departments" Type="ISSAModel.tbl_Ref_Departments" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Departments">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Ref_Locations_tbl_Ref_Regions">
+    <End Role="tbl_Ref_Regions" Type="ISSAModel.tbl_Ref_Regions" Multiplicity="0..1" />
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.tbl_Ref_Locations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="tbl_Ref_Locations">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReportChecks" Type="ISSAModel.tbl_Sup_ShiftReportChecks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReportChecks">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Ref_Shifts_tbl_Ref_Positions">
+    <End Role="tbl_Ref_Positions" Type="ISSAModel.tbl_Ref_Positions" Multiplicity="0..1" />
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.tbl_Ref_Shifts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Positions">
+        <PropertyRef Name="PositionID" />
+      </Principal>
+      <Dependent Role="tbl_Ref_Shifts">
+        <PropertyRef Name="PositionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Positions">
+    <End Role="tbl_Ref_Positions" Type="ISSAModel.tbl_Ref_Positions" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Positions">
+        <PropertyRef Name="PositionID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="PositionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReport" Type="ISSAModel.tbl_Sup_ShiftReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReport">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReportChecks_Officers" Type="ISSAModel.tbl_Sup_ShiftReportChecks_Officers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReportChecks_Officers">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport">
+    <End Role="tbl_Sup_ShiftReport" Type="ISSAModel.tbl_Sup_ShiftReport" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReportChecks" Type="ISSAModel.tbl_Sup_ShiftReportChecks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_ShiftReport">
+        <PropertyRef Name="ShiftReportID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReportChecks">
+        <PropertyRef Name="ShiftReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks">
+    <End Role="tbl_Sup_ShiftReportChecks" Type="ISSAModel.tbl_Sup_ShiftReportChecks" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReportChecks_Officers" Type="ISSAModel.tbl_Sup_ShiftReportChecks_Officers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_ShiftReportChecks">
+        <PropertyRef Name="ChecksID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReportChecks_Officers">
+        <PropertyRef Name="ChecksID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsersInRoles">
+    <End Role="Roles" Type="ISSAModel.Role" Multiplicity="*" />
+    <End Role="Users" Type="ISSAModel.User" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="sp_Acknowledgement_Sel4DDL_Result">
+    <Property Type="Byte" Name="ComplaintChannelID" Nullable="true" />
+    <Property Type="String" Name="Channel" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_Area_Sel4DDL_Result">
+    <Property Type="Byte" Name="AreaID" Nullable="true" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_CallForwardedTo_Sel4DDL_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="fullName" Nullable="true" MaxLength="52" />
+  </ComplexType>
+  <ComplexType Name="sp_CallInOff_Search_Result">
+    <Property Type="String" Name="ReportNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="CallInOffID" Nullable="false" />
+    <Property Type="String" Name="isCallIn" Nullable="false" MaxLength="3" />
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="EmpFullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Time" Nullable="true" MaxLength="5" />
+    <Property Type="Int16" Name="CallTakenByID" Nullable="true" />
+    <Property Type="String" Name="CallTakenBy" Nullable="true" MaxLength="52" />
+    <Property Type="Int16" Name="ForwardedToID" Nullable="true" />
+    <Property Type="String" Name="ForwardedTo" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="WorkSchedule" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="12" />
+    <Property Type="Byte" Name="AbsentTypeID" Nullable="true" />
+    <Property Type="String" Name="AbsentType" Nullable="true" MaxLength="1028" />
+    <Property Type="Byte" Name="SickLeaveForID" Nullable="true" />
+    <Property Type="String" Name="SickLeaveFor" Nullable="true" MaxLength="1023" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="5000" />
+    <Property Type="String" Name="OtherTypeDescription" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="OtherSickLeaveForTypeDescription" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_CallTakenBy_Sel4DDL_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="fullName" Nullable="true" MaxLength="52" />
+  </ComplexType>
+  <ComplexType Name="sp_ComplaintMode_Sel4DDL_Result">
+    <Property Type="Byte" Name="ComplaintChannelID" Nullable="true" />
+    <Property Type="String" Name="Channel" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_Complaints_Search_Result">
+    <Property Type="Int32" Name="ComplaintID" Nullable="false" />
+    <Property Type="String" Name="ComplaintNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Byte" Name="AreaID" Nullable="true" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="LocationID" Nullable="true" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DateOfIncident" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TimeOfIncident" Nullable="true" MaxLength="5" />
+    <Property Type="Byte" Name="ComplaintChannelID" Nullable="true" />
+    <Property Type="String" Name="Mode" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PersonMakingReport" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactNumber" Nullable="true" MaxLength="12" />
+    <Property Type="Int16" Name="ReceivedByID" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="DateReceived" Nullable="true" MaxLength="10" />
+    <Property Type="Byte" Name="AcknowledgementID" Nullable="true" />
+    <Property Type="String" Name="Acknowledgement" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ClientComplaint" Nullable="true" MaxLength="5000" />
+    <Property Type="String" Name="feedbackProvided" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="DateOfFeedback" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="ActionTaken" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_ActualPersonWorking_Select_Result">
+    <Property Type="Int64" Name="PersonWorkingID" Nullable="false" />
+    <Property Type="Boolean" Name="IsPresent" Nullable="true" />
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="Boolean" Name="isStandBy" Nullable="true" />
+    <Property Type="Int32" Name="IsDayOff" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_Audit_Select_Result">
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_CallLog_Select_Result">
+    <Property Type="Int64" Name="CallLogID" Nullable="false" />
+    <Property Type="String" Name="TimeOfCall" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="Reports" Nullable="true" MaxLength="5000" />
+    <Property Type="String" Name="SupCheckLocation" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_Doubles_Select_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="shiftTime" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_Doubles_Select2_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="shiftTime" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_Doubles_SelectAllEmployees_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="shiftTime" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_DoublesWorking_Select_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="Int32" Name="DoubleID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_LastCheckLocationAndTime_Result">
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TimeOfCall" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="SupCheckLocation" Nullable="false" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_LastCheckTime_Result">
+    <Property Type="String" Name="TimeOfCall" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="SupCheckLocation" Nullable="false" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_PersonWorking_Select_Result">
+    <Property Type="Int32" Name="PersonWorkingID" Nullable="true" />
+    <Property Type="Int32" Name="IsPresent" Nullable="true" />
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="Int32" Name="isStandBy" Nullable="false" />
+    <Property Type="Boolean" Name="IsDayOff" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_Search_Result">
+    <Property Type="Int32" Name="DailyLogID" Nullable="false" />
+    <Property Type="String" Name="LogNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Byte" Name="AreaID" Nullable="true" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="LocationID" Nullable="true" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+    <Property Type="Byte" Name="ShiftID" Nullable="false" />
+    <Property Type="String" Name="shift" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="PersonsPresent" Nullable="true" />
+    <Property Type="Int32" Name="PersonsAbsent" Nullable="true" />
+    <Property Type="Int32" Name="Switches" Nullable="true" />
+    <Property Type="Int32" Name="Doubles" Nullable="true" />
+    <Property Type="Int32" Name="CallsMade" Nullable="true" />
+    <Property Type="String" Name="LastCheckTime" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_Switches_Select_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="Int32" Name="isStandBy" Nullable="false" />
+    <Property Type="Int32" Name="IsDayOff" Nullable="true" />
+    <Property Type="Int32" Name="SwitchID" Nullable="true" />
+    <Property Type="Int32" Name="IsChecked" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_DailyLog_SwitchesWorking_Select_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="Boolean" Name="isStandBy" Nullable="true" />
+    <Property Type="Int32" Name="IsDayOff" Nullable="false" />
+    <Property Type="Int32" Name="SwitchID" Nullable="false" />
+    <Property Type="Boolean" Name="IsChecked" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_Department_Sel4DDL_Result">
+    <Property Type="Byte" Name="DepartmentID" Nullable="true" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="sp_Employee_Search_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="OtherName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="DateHired" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Department" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PositionName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Shift" Nullable="true" MaxLength="13" />
+    <Property Type="Byte" Name="AreaID" Nullable="true" />
+    <Property Type="Int16" Name="LocationID" Nullable="true" />
+    <Property Type="Byte" Name="DepartmentID" Nullable="true" />
+    <Property Type="Byte" Name="PositionID" Nullable="true" />
+    <Property Type="Byte" Name="ShiftID" Nullable="true" />
+    <Property Type="String" Name="isStandByStaff" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="isActive" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="employeeNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_Employee_Sel4DDL_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+  </ComplexType>
+  <ComplexType Name="sp_Employee_Sel4DDL_ByPositionID_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+  </ComplexType>
+  <ComplexType Name="sp_Employee_SelectForWorkSchedule_Result">
+    <Property Type="Int32" Name="WorkScheduleEmployeeID" Nullable="false" />
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="employeenumber" Nullable="true" MaxLength="20" />
+    <Property Type="Int16" Name="locationid" Nullable="true" />
+    <Property Type="String" Name="IsComplete" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Exclude" Nullable="false" MaxLength="5" />
+    <Property Type="Int32" Name="StandyByEmployeeID" Nullable="true" />
+    <Property Type="String" Name="createdOn" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="sp_Employee_SelectFromWorkSchedule_Result">
+    <Property Type="Int64" Name="WorkScheduleEmployeeID" Nullable="false" />
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="employeenumber" Nullable="true" MaxLength="20" />
+    <Property Type="Int16" Name="locationid" Nullable="true" />
+    <Property Type="Boolean" Name="IsComplete" Nullable="true" />
+    <Property Type="Boolean" Name="Exclude" Nullable="true" />
+    <Property Type="Int16" Name="StandyByEmployeeID" Nullable="true" />
+    <Property Type="String" Name="createdOn" Nullable="true" MaxLength="22" />
+  </ComplexType>
+  <ComplexType Name="sp_Employee_UnscheduledSelectForWorkSchedule_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="String" Name="employeenumber" Nullable="true" MaxLength="20" />
+    <Property Type="Int16" Name="locationid" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="sp_FilterHistory_Result">
+    <Property Type="DateTime" Name="DateTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="AuditProcess" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_Incidents_Search_Result">
+    <Property Type="Int32" Name="IncidentID" Nullable="false" />
+    <Property Type="String" Name="IncidentNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Byte" Name="AreaID" Nullable="true" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="LocationID" Nullable="true" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DateOccured" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TimeOccured" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="IncidentType" Nullable="true" MaxLength="553" />
+    <Property Type="Byte" Name="IncidentTypeID" Nullable="true" />
+    <Property Type="String" Name="OtherTypeDescription" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="5000" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_IncidentType_Sel4DDL_Result">
+    <Property Type="Byte" Name="Seq" Nullable="true" />
+    <Property Type="Byte" Name="IncidentTypeID" Nullable="true" />
+    <Property Type="String" Name="IncidentType" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_Location_Sel4DDL_ByAreaID_Result">
+    <Property Type="Int16" Name="LocationID" Nullable="true" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_Operators_Sel4DDL_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+  </ComplexType>
+  <ComplexType Name="sp_Position_Sel4DDL_Result">
+    <Property Type="Byte" Name="PositionID" Nullable="true" />
+    <Property Type="String" Name="PositionName" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="sp_RPT_WorkSchedule_Result">
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Shift" Nullable="true" MaxLength="19" />
+    <Property Type="Int32" Name="day" Nullable="true" />
+    <Property Type="String" Name="staff" Nullable="true" MaxLength="27" />
+  </ComplexType>
+  <ComplexType Name="sp_Shift_Sel4DDL_Result">
+    <Property Type="Byte" Name="ShiftID" Nullable="true" />
+    <Property Type="String" Name="shift" Nullable="true" MaxLength="13" />
+  </ComplexType>
+  <ComplexType Name="sp_Shift_Sel4DDL_ByPositionID_Result">
+    <Property Type="Byte" Name="ShiftID" Nullable="true" />
+    <Property Type="String" Name="shift" Nullable="true" MaxLength="13" />
+  </ComplexType>
+  <ComplexType Name="sp_Shift_Sel4DDL_ByPositionIDAndTime_Result">
+    <Property Type="Byte" Name="ShiftID" Nullable="true" />
+    <Property Type="String" Name="shift" Nullable="true" MaxLength="13" />
+  </ComplexType>
+  <ComplexType Name="sp_Shift_Sel4TAB_ByPositionID_Result">
+    <Property Type="Byte" Name="ShiftID" Nullable="false" />
+    <Property Type="String" Name="shift" Nullable="true" MaxLength="13" />
+  </ComplexType>
+  <ComplexType Name="sp_ShiftReports_Search_Result">
+    <Property Type="Int32" Name="ShiftReportID" Nullable="false" />
+    <Property Type="String" Name="ReportNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Byte" Name="AreaID" Nullable="true" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="10" />
+    <Property Type="Byte" Name="ShiftID" Nullable="true" />
+    <Property Type="String" Name="shift" Nullable="true" MaxLength="13" />
+    <Property Type="Int16" Name="SupervisorID" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+    <Property Type="Int32" Name="Checks" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_SickLeaveFor_Sel4DDL_Result">
+    <Property Type="Byte" Name="SickLeaveForID" Nullable="true" />
+    <Property Type="String" Name="LeaveFor" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_SpecialOperations_Search_Result">
+    <Property Type="Int32" Name="SpecialOperationsID" Nullable="false" />
+    <Property Type="Byte" Name="AreaID" Nullable="true" />
+    <Property Type="Int16" Name="LocationID" Nullable="true" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Area" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LocationName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="EscortService" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CashInGT" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CashOutGT" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ExtraOfficersAmount" Nullable="true" MaxLength="36" />
+    <Property Type="Byte" Name="AmountOfficers" Nullable="true" />
+    <Property Type="Boolean" Name="ExtraOfficers" Nullable="true" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="ReportNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="sp_StandByEmployee_Sel4DDL_Result">
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+  </ComplexType>
+  <ComplexType Name="sp_WorkSchedule_AuditSelect_Result">
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CreatedOn" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="LastModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastModifiedOn" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <EntityType Name="tbl_Sup_DailyMasterRoster">
+    <Key>
+      <PropertyRef Name="MasterRosterID" />
+    </Key>
+    <Property Type="Int32" Name="MasterRosterID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PostAssignmentID" />
+    <Property Type="String" Name="OfficerAssigned" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="ReasonForAbsence" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="RelievingOfficer" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Comments" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="Byte" Name="LastModifiedBy" />
+    <Property Type="DateTime" Name="LastModifiedOn" Precision="3" />
+    <NavigationProperty Name="tbl_Sup_DailyPostAssignment" Relationship="ISSAModel.FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment" FromRole="tbl_Sup_DailyMasterRoster" ToRole="tbl_Sup_DailyPostAssignment" />
+  </EntityType>
+  <ComplexType Name="sp_Employee_Sel4DDL_2_Result">
+    <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="52" />
+  </ComplexType>
+  <ComplexType Name="sp_FilterUsers_Result">
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="51" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="UID" Nullable="true" />
+    <Property Type="Int16" Name="EmployeeID" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="RoleName" Nullable="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastActivityDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="tbl_Sup_DailyPostAssignment">
+    <Key>
+      <PropertyRef Name="PostAssignmentID" />
+    </Key>
+    <Property Type="Int32" Name="PostAssignmentID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Date" Precision="0" />
+    <Property Type="Byte" Name="ShiftID" />
+    <Property Type="Int16" Name="LateArrivals" />
+    <Property Type="Int16" Name="CallsForAssistance" />
+    <Property Type="Int16" Name="OfficersPresent" />
+    <Property Type="Int16" Name="OfficersAbsent" />
+    <Property Type="Int16" Name="OfficersAssigned" />
+    <Property Type="Int16" Name="OfficersCalledOut" />
+    <Property Type="Int16" Name="OfficersCallInForDayOff" />
+    <Property Type="Int16" Name="OfficersOnDayOff" />
+    <Property Type="Int16" Name="NotDressedProperly" />
+    <Property Type="Int16" Name="Sleeping" />
+    <Property Type="String" Name="ShiftSummary" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShiftBriefingNotes" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PassedOnFrom" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PassedOnTo" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SummaryOfIncidents" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReportNumber" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="Byte" Name="LastModifiedBy" />
+    <Property Type="DateTime" Name="LastModifiedOn" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Shifts" Relationship="ISSAModel.FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts" FromRole="tbl_Sup_DailyPostAssignment" ToRole="tbl_Ref_Shifts" />
+    <NavigationProperty Name="tbl_Sup_DailyMasterRoster" Relationship="ISSAModel.FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment" FromRole="tbl_Sup_DailyPostAssignment" ToRole="tbl_Sup_DailyMasterRoster" />
+  </EntityType>
+  <EntityType Name="temptable">
+    <Key>
+      <PropertyRef Name="LastName" />
+    </Key>
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Area" />
+    <Property Type="Int16" Name="Location" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+  </EntityType>
+  <Association Name="FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts">
+    <End Type="ISSAModel.tbl_Ref_Shifts" Role="tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Sup_DailyPostAssignment" Role="tbl_Sup_DailyPostAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_DailyPostAssignment">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment">
+    <End Type="ISSAModel.tbl_Sup_DailyPostAssignment" Role="tbl_Sup_DailyPostAssignment" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Sup_DailyMasterRoster" Role="tbl_Sup_DailyMasterRoster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_DailyPostAssignment">
+        <PropertyRef Name="PostAssignmentID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_DailyMasterRoster">
+        <PropertyRef Name="PostAssignmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Op_DailyLogsPersonWorking">
+    <Key>
+      <PropertyRef Name="PersonWorkingID" />
+    </Key>
+    <Property Type="Int64" Name="PersonWorkingID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="DailyLogID" />
+    <Property Type="Int16" Name="EmployeeID" />
+    <Property Type="Boolean" Name="IsPresent" />
+    <Property Type="DateTime" Name="TimeClocked" Precision="3" />
+    <Property Type="Boolean" Name="IsSwitch" />
+    <Property Type="Boolean" Name="IsDouble" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="Byte" Name="LastModifiedBy" />
+    <Property Type="DateTime" Name="LastModifiedOn" Precision="3" />
+    <NavigationProperty Name="tbl_Op_DailyLogs" Relationship="ISSAModel.FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs" FromRole="tbl_Op_DailyLogsPersonWorking" ToRole="tbl_Op_DailyLogs" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees" FromRole="tbl_Op_DailyLogsPersonWorking" ToRole="tbl_Sup_Employees" />
+  </EntityType>
+  <Association Name="FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs">
+    <End Type="ISSAModel.tbl_Op_DailyLogs" Role="tbl_Op_DailyLogs" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_DailyLogsPersonWorking" Role="tbl_Op_DailyLogsPersonWorking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="DailyLogID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogsPersonWorking">
+        <PropertyRef Name="DailyLogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees">
+    <End Type="ISSAModel.tbl_Sup_Employees" Role="tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_DailyLogsPersonWorking" Role="tbl_Op_DailyLogsPersonWorking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogsPersonWorking">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Mgr_WeeklySecurityReport">
+    <Key>
+      <PropertyRef Name="SecurityReportID" />
+    </Key>
+    <Property Type="Int32" Name="SecurityReportID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ReportNumber" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="AreaID" />
+    <Property Type="DateTime" Name="WeekStart" Precision="0" />
+    <Property Type="DateTime" Name="WeekEnd" Precision="0" />
+    <Property Type="Byte" Name="WeekNumber" />
+    <Property Type="String" Name="Comments" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="Byte" Name="LastModifiedBy" />
+    <Property Type="DateTime" Name="LastModifiedOn" Precision="3" />
+    <NavigationProperty Name="tbl_Ref_Areas" Relationship="ISSAModel.FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas" FromRole="tbl_Mgr_WeeklySecurityReport" ToRole="tbl_Ref_Areas" />
+    <NavigationProperty Name="tbl_Mgr_WeeklySecurityReportComparison" Relationship="ISSAModel.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport" FromRole="tbl_Mgr_WeeklySecurityReport" ToRole="tbl_Mgr_WeeklySecurityReportComparison" />
+  </EntityType>
+  <Association Name="FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas">
+    <End Type="ISSAModel.tbl_Ref_Areas" Role="tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Mgr_WeeklySecurityReport" Role="tbl_Mgr_WeeklySecurityReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WeeklySecurityReport">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Mgr_WeeklySecurityReportComparison">
+    <Key>
+      <PropertyRef Name="ComparisonID" />
+    </Key>
+    <Property Type="Int32" Name="ComparisonID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Byte" Name="ShiftID" />
+    <Property Type="Int32" Name="SecurityReportID" />
+    <Property Type="String" Name="CashInGT" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CashOutGT" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Other" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Monday" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Tuesday" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Wednesday" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Thursday" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Friday" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Saturday" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sunday" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Present" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Absent" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IncidentComplaints" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Switches" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsScheduled" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="Byte" Name="LastModifiedBy" />
+    <Property Type="DateTime" Name="LastModifiedOn" Precision="3" />
+    <NavigationProperty Name="tbl_Mgr_WeeklySecurityReport" Relationship="ISSAModel.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport" FromRole="tbl_Mgr_WeeklySecurityReportComparison" ToRole="tbl_Mgr_WeeklySecurityReport" />
+    <NavigationProperty Name="tbl_Ref_Shifts" Relationship="ISSAModel.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts" FromRole="tbl_Mgr_WeeklySecurityReportComparison" ToRole="tbl_Ref_Shifts" />
+  </EntityType>
+  <Association Name="FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport">
+    <End Type="ISSAModel.tbl_Mgr_WeeklySecurityReport" Role="tbl_Mgr_WeeklySecurityReport" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Mgr_WeeklySecurityReportComparison" Role="tbl_Mgr_WeeklySecurityReportComparison" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Mgr_WeeklySecurityReport">
+        <PropertyRef Name="SecurityReportID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WeeklySecurityReportComparison">
+        <PropertyRef Name="SecurityReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts">
+    <End Type="ISSAModel.tbl_Ref_Shifts" Role="tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Mgr_WeeklySecurityReportComparison" Role="tbl_Mgr_WeeklySecurityReportComparison" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WeeklySecurityReportComparison">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Mgr_DateTimeGrant">
+    <Key>
+      <PropertyRef Name="GrantID" />
+    </Key>
+    <Property Type="Int32" Name="GrantID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="DateTimeFrom" Precision="3" />
+    <Property Type="DateTime" Name="DateTimeTo" Precision="3" />
+    <Property Type="String" Name="Comments" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_Reports">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Type="Byte" Name="ReportID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ReportName" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_ReportsRole">
+    <Key>
+      <PropertyRef Name="ReportRoleID" />
+    </Key>
+    <Property Type="Int16" Name="ReportRoleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Byte" Name="ReportID" />
+    <Property Type="Guid" Name="RoleID" />
+  </EntityType>
+  <EntityType Name="tbl_Op_Incidents">
+    <Key>
+      <PropertyRef Name="IncidentID" />
+    </Key>
+    <Property Type="Int32" Name="IncidentID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Byte" Name="AreaID" />
+    <Property Type="Int16" Name="LocationID" />
+    <Property Type="DateTime" Name="DateOccured" Precision="0" />
+    <Property Type="Time" Name="TimeOccured" Precision="7" />
+    <Property Type="Byte" Name="IncidentTypeID" />
+    <Property Type="String" Name="OtherTypeDescription" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IncidentNumber" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="Byte" Name="LastModifiedBy" />
+    <Property Type="DateTime" Name="LastModifiedOn" Precision="3" />
+    <Property Type="Byte" Name="ShiftID" />
+    <Property Type="String" Name="ActionTaken" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_Op_IncidentPersonsAffected" Relationship="ISSAModel.FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents" FromRole="tbl_Op_Incidents" ToRole="tbl_Op_IncidentPersonsAffected" />
+    <NavigationProperty Name="tbl_Ref_Areas" Relationship="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_Areas" FromRole="tbl_Op_Incidents" ToRole="tbl_Ref_Areas" />
+    <NavigationProperty Name="tbl_Ref_IncidentTypes" Relationship="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes" FromRole="tbl_Op_Incidents" ToRole="tbl_Ref_IncidentTypes" />
+    <NavigationProperty Name="tbl_Ref_Locations" Relationship="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_Locations" FromRole="tbl_Op_Incidents" ToRole="tbl_Ref_Locations" />
+  </EntityType>
+  <Association Name="FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents">
+    <End Type="ISSAModel.tbl_Op_Incidents" Role="tbl_Op_Incidents" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_IncidentPersonsAffected" Role="tbl_Op_IncidentPersonsAffected" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Op_Incidents">
+        <PropertyRef Name="IncidentID" />
+      </Principal>
+      <Dependent Role="tbl_Op_IncidentPersonsAffected">
+        <PropertyRef Name="IncidentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Incidents_tbl_Ref_Areas">
+    <End Type="ISSAModel.tbl_Ref_Areas" Role="tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_Incidents" Role="tbl_Op_Incidents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Incidents">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes">
+    <End Type="ISSAModel.tbl_Ref_IncidentTypes" Role="tbl_Ref_IncidentTypes" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_Incidents" Role="tbl_Op_Incidents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_IncidentTypes">
+        <PropertyRef Name="IncidentTypeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Incidents">
+        <PropertyRef Name="IncidentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Incidents_tbl_Ref_Locations">
+    <End Type="ISSAModel.tbl_Ref_Locations" Role="tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_Incidents" Role="tbl_Op_Incidents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Incidents">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Op_CallIn_Absent">
+    <Key>
+      <PropertyRef Name="CallInOffID" />
+    </Key>
+    <Property Type="Int32" Name="CallInOffID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Boolean" Name="IsCallIn" />
+    <Property Type="Int16" Name="EmployeeID" />
+    <Property Type="DateTime" Name="Date" Precision="0" />
+    <Property Type="Time" Name="Time" Precision="7" />
+    <Property Type="Int16" Name="CallTakenByID" />
+    <Property Type="Int16" Name="ForwardedToID" />
+    <Property Type="String" Name="WorkSchedule" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PhoneNumber" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="AbsentTypeID" />
+    <Property Type="String" Name="OtherTypeDescription" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="SickLeaveForID" />
+    <Property Type="String" Name="OtherSickLeaveForTypeDescription" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Comments" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartDate" Precision="0" />
+    <Property Type="DateTime" Name="EndDate" Precision="0" />
+    <Property Type="Byte" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="Byte" Name="LastModifiedBy" />
+    <Property Type="DateTime" Name="LastModifiedOn" Precision="3" />
+    <Property Type="String" Name="ReportNumber" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="ShiftID" />
+    <NavigationProperty Name="tbl_Ref_AbsentType" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType" FromRole="tbl_Op_CallIn_Absent" ToRole="tbl_Ref_AbsentType" />
+    <NavigationProperty Name="tbl_Ref_SickLeaveFor" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor" FromRole="tbl_Op_CallIn_Absent" ToRole="tbl_Ref_SickLeaveFor" />
+    <NavigationProperty Name="tbl_Sup_Employees" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees" FromRole="tbl_Op_CallIn_Absent" ToRole="tbl_Sup_Employees" />
+    <NavigationProperty Name="tbl_Sup_Employees1" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1" FromRole="tbl_Op_CallIn_Absent" ToRole="tbl_Sup_Employees" />
+    <NavigationProperty Name="tbl_Sup_Employees2" Relationship="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2" FromRole="tbl_Op_CallIn_Absent" ToRole="tbl_Sup_Employees" />
+  </EntityType>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType">
+    <End Type="ISSAModel.tbl_Ref_AbsentType" Role="tbl_Ref_AbsentType" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_CallIn_Absent" Role="tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_AbsentType">
+        <PropertyRef Name="AbsentTypeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="AbsentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor">
+    <End Type="ISSAModel.tbl_Ref_SickLeaveFor" Role="tbl_Ref_SickLeaveFor" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_CallIn_Absent" Role="tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_SickLeaveFor">
+        <PropertyRef Name="SickLeaveForID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="SickLeaveForID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees">
+    <End Type="ISSAModel.tbl_Sup_Employees" Role="tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_CallIn_Absent" Role="tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1">
+    <End Type="ISSAModel.tbl_Sup_Employees" Role="tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_CallIn_Absent" Role="tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="CallTakenByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2">
+    <End Type="ISSAModel.tbl_Sup_Employees" Role="tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Type="ISSAModel.tbl_Op_CallIn_Absent" Role="tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="ForwardedToID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

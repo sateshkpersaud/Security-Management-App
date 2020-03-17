@@ -1,0 +1,1918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISSAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ISSAModelStoreContainer">
+    <EntitySet Name="Applications" EntityType="ISSAModel.Store.Applications" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Memberships" EntityType="ISSAModel.Store.Memberships" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Profiles" EntityType="ISSAModel.Store.Profiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="ISSAModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="ISSAModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Admin_RolesMasterLevel" EntityType="ISSAModel.Store.tbl_Admin_RolesMasterLevel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Admin_RolesSubLevel" EntityType="ISSAModel.Store.tbl_Admin_RolesSubLevel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Admin_User_Role" EntityType="ISSAModel.Store.tbl_Admin_User_Role" store:Type="Tables" store:Schema="dbo" store:Name="tbl_Admin_User_Role">
+      <DefiningQuery>SELECT 
+      [tbl_Admin_User_Role].[UserRoleID] AS [UserRoleID], 
+      [tbl_Admin_User_Role].[UserID] AS [UserID], 
+      [tbl_Admin_User_Role].[RoleSubLevelID] AS [RoleSubLevelID], 
+      [tbl_Admin_User_Role].[Createdby] AS [Createdby], 
+      [tbl_Admin_User_Role].[CreatedOn] AS [CreatedOn], 
+      [tbl_Admin_User_Role].[LastModifiedBy] AS [LastModifiedBy], 
+      [tbl_Admin_User_Role].[LastModifiedOn] AS [LastModifiedOn]
+      FROM [dbo].[tbl_Admin_User_Role] AS [tbl_Admin_User_Role]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_Admin_Users" EntityType="ISSAModel.Store.tbl_Admin_Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_AuditLog" EntityType="ISSAModel.Store.tbl_AuditLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Mgr_DateTimeGrant" EntityType="ISSAModel.Store.tbl_Mgr_DateTimeGrant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Mgr_SpecialOperations" EntityType="ISSAModel.Store.tbl_Mgr_SpecialOperations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Mgr_WeeklySecurityReport" EntityType="ISSAModel.Store.tbl_Mgr_WeeklySecurityReport" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Mgr_WeeklySecurityReportComparison" EntityType="ISSAModel.Store.tbl_Mgr_WeeklySecurityReportComparison" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Mgr_WorkSchedule" EntityType="ISSAModel.Store.tbl_Mgr_WorkSchedule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Mgr_WorkSchedule_Days" EntityType="ISSAModel.Store.tbl_Mgr_WorkSchedule_Days" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Mgr_WorkSchedule_Employees" EntityType="ISSAModel.Store.tbl_Mgr_WorkSchedule_Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Op_CallIn_Absent" EntityType="ISSAModel.Store.tbl_Op_CallIn_Absent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Op_Complaints" EntityType="ISSAModel.Store.tbl_Op_Complaints" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Op_DailyLogs" EntityType="ISSAModel.Store.tbl_Op_DailyLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Op_DailyLogsCallLog" EntityType="ISSAModel.Store.tbl_Op_DailyLogsCallLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Op_DailyLogsPersonWorking" EntityType="ISSAModel.Store.tbl_Op_DailyLogsPersonWorking" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Op_IncidentPersonsAffected" EntityType="ISSAModel.Store.tbl_Op_IncidentPersonsAffected" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Op_Incidents" EntityType="ISSAModel.Store.tbl_Op_Incidents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_AbsentType" EntityType="ISSAModel.Store.tbl_Ref_AbsentType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_Areas" EntityType="ISSAModel.Store.tbl_Ref_Areas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_ComplaintChannel" EntityType="ISSAModel.Store.tbl_Ref_ComplaintChannel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_Departments" EntityType="ISSAModel.Store.tbl_Ref_Departments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_IncidentPersonAffectedType" EntityType="ISSAModel.Store.tbl_Ref_IncidentPersonAffectedType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_IncidentTypes" EntityType="ISSAModel.Store.tbl_Ref_IncidentTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_Locations" EntityType="ISSAModel.Store.tbl_Ref_Locations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_Positions" EntityType="ISSAModel.Store.tbl_Ref_Positions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_Regions" EntityType="ISSAModel.Store.tbl_Ref_Regions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_Shifts" EntityType="ISSAModel.Store.tbl_Ref_Shifts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_SickLeaveFor" EntityType="ISSAModel.Store.tbl_Ref_SickLeaveFor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Ref_WorkScheduleCategories" EntityType="ISSAModel.Store.tbl_Ref_WorkScheduleCategories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Reports" EntityType="ISSAModel.Store.tbl_Reports" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_ReportsRole" EntityType="ISSAModel.Store.tbl_ReportsRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Sup_DailyMasterRoster" EntityType="ISSAModel.Store.tbl_Sup_DailyMasterRoster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Sup_DailyPostAssignment" EntityType="ISSAModel.Store.tbl_Sup_DailyPostAssignment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Sup_Employees" EntityType="ISSAModel.Store.tbl_Sup_Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Sup_ShiftReport" EntityType="ISSAModel.Store.tbl_Sup_ShiftReport" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Sup_ShiftReportChecks" EntityType="ISSAModel.Store.tbl_Sup_ShiftReportChecks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Sup_ShiftReportChecks_Officers" EntityType="ISSAModel.Store.tbl_Sup_ShiftReportChecks_Officers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="temptable" EntityType="ISSAModel.Store.temptable" store:Type="Tables" store:Schema="dbo" store:Name="temptable">
+      <DefiningQuery>SELECT 
+      [temptable].[FirstName] AS [FirstName], 
+      [temptable].[LastName] AS [LastName], 
+      [temptable].[CreatedBy] AS [CreatedBy], 
+      [temptable].[CreatedOn] AS [CreatedOn], 
+      [temptable].[Area] AS [Area], 
+      [temptable].[Location] AS [Location]
+      FROM [dbo].[temptable] AS [temptable]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Users" EntityType="ISSAModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsersInRoles" EntityType="ISSAModel.Store.UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas" Association="ISSAModel.Store.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Mgr_SpecialOperations" EntitySet="tbl_Mgr_SpecialOperations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations" Association="ISSAModel.Store.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Mgr_SpecialOperations" EntitySet="tbl_Mgr_SpecialOperations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas" Association="ISSAModel.Store.FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Mgr_WeeklySecurityReport" EntitySet="tbl_Mgr_WeeklySecurityReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport" Association="ISSAModel.Store.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport">
+      <End Role="tbl_Mgr_WeeklySecurityReport" EntitySet="tbl_Mgr_WeeklySecurityReport" />
+      <End Role="tbl_Mgr_WeeklySecurityReportComparison" EntitySet="tbl_Mgr_WeeklySecurityReportComparison" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts" Association="ISSAModel.Store.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Mgr_WeeklySecurityReportComparison" EntitySet="tbl_Mgr_WeeklySecurityReportComparison" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees" Association="ISSAModel.Store.FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees">
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+      <End Role="tbl_Mgr_WorkSchedule_Days" EntitySet="tbl_Mgr_WorkSchedule_Days" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule" Association="ISSAModel.Store.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule">
+      <End Role="tbl_Mgr_WorkSchedule" EntitySet="tbl_Mgr_WorkSchedule" />
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations" Association="ISSAModel.Store.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees" Association="ISSAModel.Store.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1" Association="ISSAModel.Store.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Mgr_WorkSchedule_Employees" EntitySet="tbl_Mgr_WorkSchedule_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts" Association="ISSAModel.Store.FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Mgr_WorkSchedule" EntitySet="tbl_Mgr_WorkSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType" Association="ISSAModel.Store.FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType">
+      <End Role="tbl_Ref_AbsentType" EntitySet="tbl_Ref_AbsentType" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor" Association="ISSAModel.Store.FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor">
+      <End Role="tbl_Ref_SickLeaveFor" EntitySet="tbl_Ref_SickLeaveFor" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees" Association="ISSAModel.Store.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1" Association="ISSAModel.Store.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2" Association="ISSAModel.Store.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_CallIn_Absent" EntitySet="tbl_Op_CallIn_Absent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Ref_Areas" Association="ISSAModel.Store.FK_tbl_Op_Complaints_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel" Association="ISSAModel.Store.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel">
+      <End Role="tbl_Ref_ComplaintChannel" EntitySet="tbl_Ref_ComplaintChannel" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1" Association="ISSAModel.Store.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1">
+      <End Role="tbl_Ref_ComplaintChannel" EntitySet="tbl_Ref_ComplaintChannel" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Ref_Locations" Association="ISSAModel.Store.FK_tbl_Op_Complaints_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Complaints_tbl_Sup_Employees" Association="ISSAModel.Store.FK_tbl_Op_Complaints_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_Complaints" EntitySet="tbl_Op_Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogs_tbl_Ref_Areas" Association="ISSAModel.Store.FK_tbl_Op_DailyLogs_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogs_tbl_Ref_Locations" Association="ISSAModel.Store.FK_tbl_Op_DailyLogs_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogs_tbl_Ref_Shifts" Association="ISSAModel.Store.FK_tbl_Op_DailyLogs_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs" Association="ISSAModel.Store.FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs">
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+      <End Role="tbl_Op_DailyLogsCallLog" EntitySet="tbl_Op_DailyLogsCallLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs" Association="ISSAModel.Store.FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs">
+      <End Role="tbl_Op_DailyLogs" EntitySet="tbl_Op_DailyLogs" />
+      <End Role="tbl_Op_DailyLogsPersonWorking" EntitySet="tbl_Op_DailyLogsPersonWorking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees" Association="ISSAModel.Store.FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Op_DailyLogsPersonWorking" EntitySet="tbl_Op_DailyLogsPersonWorking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents" Association="ISSAModel.Store.FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents">
+      <End Role="tbl_Op_Incidents" EntitySet="tbl_Op_Incidents" />
+      <End Role="tbl_Op_IncidentPersonsAffected" EntitySet="tbl_Op_IncidentPersonsAffected" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType" Association="ISSAModel.Store.FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType">
+      <End Role="tbl_Ref_IncidentPersonAffectedType" EntitySet="tbl_Ref_IncidentPersonAffectedType" />
+      <End Role="tbl_Op_IncidentPersonsAffected" EntitySet="tbl_Op_IncidentPersonsAffected" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Incidents_tbl_Ref_Areas" Association="ISSAModel.Store.FK_tbl_Op_Incidents_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Op_Incidents" EntitySet="tbl_Op_Incidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes" Association="ISSAModel.Store.FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes">
+      <End Role="tbl_Ref_IncidentTypes" EntitySet="tbl_Ref_IncidentTypes" />
+      <End Role="tbl_Op_Incidents" EntitySet="tbl_Op_Incidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Op_Incidents_tbl_Ref_Locations" Association="ISSAModel.Store.FK_tbl_Op_Incidents_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Op_Incidents" EntitySet="tbl_Op_Incidents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Ref_Locations_tbl_Ref_Areas" Association="ISSAModel.Store.FK_tbl_Ref_Locations_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Ref_Locations_tbl_Ref_Regions" Association="ISSAModel.Store.FK_tbl_Ref_Locations_tbl_Ref_Regions">
+      <End Role="tbl_Ref_Regions" EntitySet="tbl_Ref_Regions" />
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Ref_Shifts_tbl_Ref_Positions" Association="ISSAModel.Store.FK_tbl_Ref_Shifts_tbl_Ref_Positions">
+      <End Role="tbl_Ref_Positions" EntitySet="tbl_Ref_Positions" />
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_RolesSubLevel_tbl_RolesMasterLevel" Association="ISSAModel.Store.FK_tbl_RolesSubLevel_tbl_RolesMasterLevel">
+      <End Role="tbl_Admin_RolesMasterLevel" EntitySet="tbl_Admin_RolesMasterLevel" />
+      <End Role="tbl_Admin_RolesSubLevel" EntitySet="tbl_Admin_RolesSubLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment" Association="ISSAModel.Store.FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment">
+      <End Role="tbl_Sup_DailyPostAssignment" EntitySet="tbl_Sup_DailyPostAssignment" />
+      <End Role="tbl_Sup_DailyMasterRoster" EntitySet="tbl_Sup_DailyMasterRoster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts" Association="ISSAModel.Store.FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Sup_DailyPostAssignment" EntitySet="tbl_Sup_DailyPostAssignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Areas" Association="ISSAModel.Store.FK_tbl_Sup_Employees_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Departments" Association="ISSAModel.Store.FK_tbl_Sup_Employees_tbl_Ref_Departments">
+      <End Role="tbl_Ref_Departments" EntitySet="tbl_Ref_Departments" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Locations" Association="ISSAModel.Store.FK_tbl_Sup_Employees_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Positions" Association="ISSAModel.Store.FK_tbl_Sup_Employees_tbl_Ref_Positions">
+      <End Role="tbl_Ref_Positions" EntitySet="tbl_Ref_Positions" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_Employees_tbl_Ref_Shifts" Association="ISSAModel.Store.FK_tbl_Sup_Employees_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReport_tbl_Ref_Areas" Association="ISSAModel.Store.FK_tbl_Sup_ShiftReport_tbl_Ref_Areas">
+      <End Role="tbl_Ref_Areas" EntitySet="tbl_Ref_Areas" />
+      <End Role="tbl_Sup_ShiftReport" EntitySet="tbl_Sup_ShiftReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts" Association="ISSAModel.Store.FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts">
+      <End Role="tbl_Ref_Shifts" EntitySet="tbl_Ref_Shifts" />
+      <End Role="tbl_Sup_ShiftReport" EntitySet="tbl_Sup_ShiftReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees" Association="ISSAModel.Store.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees">
+      <End Role="tbl_Sup_Employees" EntitySet="tbl_Sup_Employees" />
+      <End Role="tbl_Sup_ShiftReportChecks_Officers" EntitySet="tbl_Sup_ShiftReportChecks_Officers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks" Association="ISSAModel.Store.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks">
+      <End Role="tbl_Sup_ShiftReportChecks" EntitySet="tbl_Sup_ShiftReportChecks" />
+      <End Role="tbl_Sup_ShiftReportChecks_Officers" EntitySet="tbl_Sup_ShiftReportChecks_Officers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations" Association="ISSAModel.Store.FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations">
+      <End Role="tbl_Ref_Locations" EntitySet="tbl_Ref_Locations" />
+      <End Role="tbl_Sup_ShiftReportChecks" EntitySet="tbl_Sup_ShiftReportChecks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport" Association="ISSAModel.Store.FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport">
+      <End Role="tbl_Sup_ShiftReport" EntitySet="tbl_Sup_ShiftReport" />
+      <End Role="tbl_Sup_ShiftReportChecks" EntitySet="tbl_Sup_ShiftReportChecks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_User_Role_tbl_RolesSubLevel" Association="ISSAModel.Store.FK_tbl_User_Role_tbl_RolesSubLevel">
+      <End Role="tbl_Admin_RolesSubLevel" EntitySet="tbl_Admin_RolesSubLevel" />
+      <End Role="tbl_Admin_User_Role" EntitySet="tbl_Admin_User_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_User_Role_tbl_Users" Association="ISSAModel.Store.FK_tbl_User_Role_tbl_Users">
+      <End Role="tbl_Admin_Users" EntitySet="tbl_Admin_Users" />
+      <End Role="tbl_Admin_User_Role" EntitySet="tbl_Admin_User_Role" />
+    </AssociationSet>
+    <AssociationSet Name="MembershipApplication" Association="ISSAModel.Store.MembershipApplication">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="Memberships" EntitySet="Memberships" />
+    </AssociationSet>
+    <AssociationSet Name="MembershipUser" Association="ISSAModel.Store.MembershipUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Memberships" EntitySet="Memberships" />
+    </AssociationSet>
+    <AssociationSet Name="RoleApplication" Association="ISSAModel.Store.RoleApplication">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="UserApplication" Association="ISSAModel.Store.UserApplication">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="UserProfile" Association="ISSAModel.Store.UserProfile">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Profiles" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="UsersInRoleRole" Association="ISSAModel.Store.UsersInRoleRole">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UsersInRoles" EntitySet="UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="UsersInRoleUser" Association="ISSAModel.Store.UsersInRoleUser">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UsersInRoles" EntitySet="UsersInRoles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="235" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Memberships">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowsStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Profiles">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="nvarchar" Nullable="false" />
+    <Property Name="PropertyValueStrings" Type="nvarchar" Nullable="false" />
+    <Property Name="PropertyValueBinary" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Admin_RolesMasterLevel">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleTitle" Type="varchar" MaxLength="20" />
+    <Property Name="RoleDescription" Type="varchar" MaxLength="150" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Admin_RolesSubLevel">
+    <Key>
+      <PropertyRef Name="RoleSubLevelID" />
+    </Key>
+    <Property Name="RoleSubLevelID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="tinyint" />
+    <Property Name="RoleTitle" Type="varchar" MaxLength="20" />
+    <Property Name="RoleDescription" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ISSA.dbo.tbl_Admin_User_Role' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tbl_Admin_User_Role">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserRoleID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="tinyint" />
+    <Property Name="RoleSubLevelID" Type="smallint" />
+    <Property Name="Createdby" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Admin_Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmployeeID" Type="smallint" />
+    <Property Name="ResetRequired" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_AuditLog">
+    <Key>
+      <PropertyRef Name="AuditLogID" />
+    </Key>
+    <Property Name="AuditLogID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SourceID" Type="int" />
+    <Property Name="AuditProcess" Type="varchar" MaxLength="200" />
+    <Property Name="TableName" Type="varchar" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="UserID" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_DateTimeGrant">
+    <Key>
+      <PropertyRef Name="GrantID" />
+    </Key>
+    <Property Name="GrantID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DateTimeFrom" Type="datetime" />
+    <Property Name="DateTimeTo" Type="datetime" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_SpecialOperations">
+    <Key>
+      <PropertyRef Name="SpecialOperationsID" />
+    </Key>
+    <Property Name="SpecialOperationsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="LocationID" Type="smallint" />
+    <Property Name="Date" Type="date" />
+    <Property Name="EscortService" Type="bit" />
+    <Property Name="CashInGT" Type="bit" />
+    <Property Name="ExtraOfficers" Type="bit" />
+    <Property Name="AmountOfficers" Type="tinyint" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="CashOutGT" Type="bit" />
+    <Property Name="Comments" Type="varchar" MaxLength="2000" />
+    <Property Name="ReportNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ShiftID" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_WeeklySecurityReport">
+    <Key>
+      <PropertyRef Name="SecurityReportID" />
+    </Key>
+    <Property Name="SecurityReportID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReportNumber" Type="varchar" MaxLength="20" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="WeekStart" Type="date" />
+    <Property Name="WeekNumber" Type="tinyint" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="WeekEnd" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_WeeklySecurityReportComparison">
+    <Key>
+      <PropertyRef Name="ComparisonID" />
+    </Key>
+    <Property Name="ComparisonID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ShiftID" Type="tinyint" />
+    <Property Name="SecurityReportID" Type="int" />
+    <Property Name="Monday" Type="varchar" MaxLength="6" />
+    <Property Name="Tuesday" Type="varchar" MaxLength="6" />
+    <Property Name="Wednesday" Type="varchar" MaxLength="6" />
+    <Property Name="Thursday" Type="varchar" MaxLength="6" />
+    <Property Name="Friday" Type="varchar" MaxLength="6" />
+    <Property Name="Saturday" Type="varchar" MaxLength="6" />
+    <Property Name="Sunday" Type="varchar" MaxLength="6" />
+    <Property Name="Present" Type="varchar" MaxLength="6" />
+    <Property Name="Absent" Type="varchar" MaxLength="6" />
+    <Property Name="IncidentComplaints" Type="varchar" MaxLength="6" />
+    <Property Name="Switches" Type="varchar" MaxLength="6" />
+    <Property Name="IsScheduled" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="CashInGT" Type="varchar" MaxLength="6" />
+    <Property Name="CashOutGT" Type="varchar" MaxLength="6" />
+    <Property Name="Other" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_WorkSchedule">
+    <Key>
+      <PropertyRef Name="WorkScheduleID" />
+    </Key>
+    <Property Name="WorkScheduleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="Year" Type="varchar" MaxLength="4" />
+    <Property Name="Month" Type="varchar" MaxLength="2" />
+    <Property Name="ShiftID" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_WorkSchedule_Days">
+    <Key>
+      <PropertyRef Name="WorkScheduleDateID" />
+    </Key>
+    <Property Name="WorkScheduleDateID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WorkScheduleEmployeeID" Type="bigint" />
+    <Property Name="Date" Type="date" />
+    <Property Name="IsDayOff" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Mgr_WorkSchedule_Employees">
+    <Key>
+      <PropertyRef Name="WorkScheduleEmployeeID" />
+    </Key>
+    <Property Name="WorkScheduleEmployeeID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WorkScheduleID" Type="int" />
+    <Property Name="EmployeeID" Type="smallint" />
+    <Property Name="LocationID" Type="smallint" />
+    <Property Name="StandyByEmployeeID" Type="smallint" />
+    <Property Name="IsComplete" Type="bit" />
+    <Property Name="Exclude" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="IsTransfer" Type="bit" />
+    <Property Name="WasUnscheduled" Type="bit" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="tbl_Op_CallIn_Absent">
+    <Key>
+      <PropertyRef Name="CallInOffID" />
+    </Key>
+    <Property Name="CallInOffID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsCallIn" Type="bit" />
+    <Property Name="EmployeeID" Type="smallint" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Time" Type="time" />
+    <Property Name="CallTakenByID" Type="smallint" />
+    <Property Name="ForwardedToID" Type="smallint" />
+    <Property Name="WorkSchedule" Type="varchar" MaxLength="1000" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="12" />
+    <Property Name="AbsentTypeID" Type="tinyint" />
+    <Property Name="OtherTypeDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="SickLeaveForID" Type="tinyint" />
+    <Property Name="OtherSickLeaveForTypeDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="ReportNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ShiftID" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="tbl_Op_Complaints">
+    <Key>
+      <PropertyRef Name="ComplaintID" />
+    </Key>
+    <Property Name="ComplaintID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ComplaintNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ComplaintChannelID" Type="tinyint" />
+    <Property Name="PersonMakingReport" Type="varchar" MaxLength="100" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="12" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="LocationID" Type="smallint" />
+    <Property Name="DateOfIncident" Type="date" />
+    <Property Name="TimeOfIncident" Type="time" />
+    <Property Name="ReceivedByID" Type="smallint" />
+    <Property Name="DateReceived" Type="date" />
+    <Property Name="AcknowledgementID" Type="tinyint" />
+    <Property Name="ClientComplaint" Type="varchar" MaxLength="5000" />
+    <Property Name="FeedbackProvided" Type="bit" />
+    <Property Name="DateOfFeedback" Type="date" />
+    <Property Name="ActionTaken" Type="varchar" MaxLength="2000" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="ShiftID" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="tbl_Op_DailyLogs">
+    <Key>
+      <PropertyRef Name="DailyLogID" />
+    </Key>
+    <Property Name="DailyLogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="LocationID" Type="smallint" />
+    <Property Name="ShiftID" Type="tinyint" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="Date" Type="date" />
+    <Property Name="LogNumber" Type="varchar" MaxLength="20" />
+    <Property Name="WorkScheduleID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Op_DailyLogsCallLog">
+    <Key>
+      <PropertyRef Name="CallLogID" />
+    </Key>
+    <Property Name="CallLogID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DailyLogID" Type="int" />
+    <Property Name="Time" Type="time" />
+    <Property Name="Reports" Type="varchar" MaxLength="5000" />
+    <Property Name="SupCheckLocation" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Op_DailyLogsPersonWorking">
+    <Key>
+      <PropertyRef Name="PersonWorkingID" />
+    </Key>
+    <Property Name="PersonWorkingID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DailyLogID" Type="int" />
+    <Property Name="EmployeeID" Type="smallint" />
+    <Property Name="IsPresent" Type="bit" />
+    <Property Name="TimeClocked" Type="datetime" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="IsSwitch" Type="bit" />
+    <Property Name="IsDouble" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Op_IncidentPersonsAffected">
+    <Key>
+      <PropertyRef Name="PersonAffectedID" />
+    </Key>
+    <Property Name="PersonAffectedID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AffectedTypeID" Type="tinyint" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="5000" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" />
+    <Property Name="OtherTypeDescription" Type="varchar" MaxLength="500" />
+    <Property Name="IncidentID" Type="int" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="12" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Op_Incidents">
+    <Key>
+      <PropertyRef Name="IncidentID" />
+    </Key>
+    <Property Name="IncidentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="LocationID" Type="smallint" />
+    <Property Name="DateOccured" Type="date" />
+    <Property Name="TimeOccured" Type="time" />
+    <Property Name="IncidentTypeID" Type="tinyint" />
+    <Property Name="OtherTypeDescription" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="5000" />
+    <Property Name="IncidentNumber" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="ShiftID" Type="tinyint" />
+    <Property Name="ActionTaken" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_AbsentType">
+    <Key>
+      <PropertyRef Name="AbsentTypeID" />
+    </Key>
+    <Property Name="AbsentTypeID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="varchar" MaxLength="25" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="Seq" Type="tinyint" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="IsForDayOff" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Areas">
+    <Key>
+      <PropertyRef Name="AreaID" />
+    </Key>
+    <Property Name="AreaID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Area" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Seq" Type="tinyint" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_ComplaintChannel">
+    <Key>
+      <PropertyRef Name="ComplaintChannelID" />
+    </Key>
+    <Property Name="ComplaintChannelID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Channel" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="IsComplaintsMade" Type="bit" />
+    <Property Name="IsAcknowledgement" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Departments">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="varchar" MaxLength="30" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_IncidentPersonAffectedType">
+    <Key>
+      <PropertyRef Name="AffectedTypeID" />
+    </Key>
+    <Property Name="AffectedTypeID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Seq" Type="tinyint" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_IncidentTypes">
+    <Key>
+      <PropertyRef Name="IncidentTypeID" />
+    </Key>
+    <Property Name="IncidentTypeID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IncidentType" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Seq" Type="tinyint" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Locations">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="LocationName" Type="varchar" MaxLength="100" />
+    <Property Name="AddressLineOne" Type="varchar" MaxLength="100" />
+    <Property Name="AddressLineTwo" Type="varchar" MaxLength="100" />
+    <Property Name="RegionID" Type="tinyint" />
+    <Property Name="ContactNumberOne" Type="varchar" MaxLength="12" />
+    <Property Name="ContactNumberTwo" Type="varchar" MaxLength="12" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Positions">
+    <Key>
+      <PropertyRef Name="PositionID" />
+    </Key>
+    <Property Name="PositionID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PositionName" Type="varchar" MaxLength="30" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Regions">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegionNumber" Type="varchar" MaxLength="2" />
+    <Property Name="RegionName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_Shifts">
+    <Key>
+      <PropertyRef Name="ShiftID" />
+    </Key>
+    <Property Name="ShiftID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PositionID" Type="tinyint" />
+    <Property Name="FromTime" Type="time" />
+    <Property Name="ToTime" Type="time" />
+    <Property Name="HoursInShift" Type="varchar" MaxLength="2" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="IsDay" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_SickLeaveFor">
+    <Key>
+      <PropertyRef Name="SickLeaveForID" />
+    </Key>
+    <Property Name="SickLeaveForID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LeaveFor" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Seq" Type="tinyint" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Ref_WorkScheduleCategories">
+    <Key>
+      <PropertyRef Name="WorkScheduleCategorieID" />
+    </Key>
+    <Property Name="WorkScheduleCategorieID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Reports">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReportName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_ReportsRole">
+    <Key>
+      <PropertyRef Name="ReportRoleID" />
+    </Key>
+    <Property Name="ReportRoleID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReportID" Type="tinyint" />
+    <Property Name="RoleID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_DailyMasterRoster">
+    <Key>
+      <PropertyRef Name="MasterRosterID" />
+    </Key>
+    <Property Name="MasterRosterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PostAssignmentID" Type="int" />
+    <Property Name="OfficerAssigned" Type="nchar" MaxLength="10" />
+    <Property Name="ReasonForAbsence" Type="nchar" MaxLength="10" />
+    <Property Name="RelievingOfficer" Type="nchar" MaxLength="10" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_DailyPostAssignment">
+    <Key>
+      <PropertyRef Name="PostAssignmentID" />
+    </Key>
+    <Property Name="PostAssignmentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="date" />
+    <Property Name="ShiftID" Type="tinyint" />
+    <Property Name="LateArrivals" Type="smallint" />
+    <Property Name="CallsForAssistance" Type="smallint" />
+    <Property Name="OfficersPresent" Type="smallint" />
+    <Property Name="OfficersAbsent" Type="smallint" />
+    <Property Name="OfficersAssigned" Type="smallint" />
+    <Property Name="ShiftSummary" Type="varchar" MaxLength="5000" />
+    <Property Name="ShiftBriefingNotes" Type="varchar" MaxLength="5000" />
+    <Property Name="PassedOnFrom" Type="varchar" MaxLength="1000" />
+    <Property Name="PassedOnTo" Type="varchar" MaxLength="1000" />
+    <Property Name="SummaryOfIncidents" Type="varchar" MaxLength="5000" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="OfficersCalledOut" Type="smallint" />
+    <Property Name="OfficersCallInForDayOff" Type="smallint" />
+    <Property Name="OfficersOnDayOff" Type="smallint" />
+    <Property Name="NotDressedProperly" Type="smallint" />
+    <Property Name="ReportNumber" Type="varchar" MaxLength="20" />
+    <Property Name="Sleeping" Type="smallint" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="OtherName" Type="varchar" MaxLength="25" />
+    <Property Name="PositionID" Type="tinyint" />
+    <Property Name="DepartmentID" Type="tinyint" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="DateHired" Type="date" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="LocationID" Type="smallint" />
+    <Property Name="ShiftID" Type="tinyint" />
+    <Property Name="IsStandbyStaff" Type="bit" />
+    <Property Name="EmployeeNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="UID" Type="tinyint" />
+    <Property Name="ResetNeeded" Type="bit" />
+    <Property Name="IsEmployee" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_ShiftReport">
+    <Key>
+      <PropertyRef Name="ShiftReportID" />
+    </Key>
+    <Property Name="ShiftReportID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="date" />
+    <Property Name="AreaID" Type="tinyint" />
+    <Property Name="ShiftID" Type="tinyint" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+    <Property Name="SupervisorID" Type="smallint" />
+    <Property Name="ReportNumber" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_ShiftReportChecks">
+    <Key>
+      <PropertyRef Name="ChecksID" />
+    </Key>
+    <Property Name="ChecksID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ShiftReportID" Type="int" />
+    <Property Name="LocationID" Type="smallint" />
+    <Property Name="CheckSequence" Type="tinyint" />
+    <Property Name="GeneralObservations" Type="varchar" MaxLength="5000" />
+    <Property Name="CorrectionsMadeSuggested" Type="varchar" MaxLength="5000" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_Sup_ShiftReportChecks_Officers">
+    <Key>
+      <PropertyRef Name="ShiftReportChecksOfficerID" />
+    </Key>
+    <Property Name="ShiftReportChecksOfficerID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ChecksID" Type="bigint" />
+    <Property Name="EmployeeID" Type="smallint" />
+    <Property Name="Time" Type="time" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="tinyint" />
+    <Property Name="LastModifiedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ISSA.dbo.temptable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="temptable">
+    <Key>
+      <PropertyRef Name="LastName" />
+    </Key>
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreatedBy" Type="tinyint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Area" Type="tinyint" />
+    <Property Name="Location" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+    <Property Name="UID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.Store.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_SpecialOperations" Type="ISSAModel.Store.tbl_Mgr_SpecialOperations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_SpecialOperations">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_SpecialOperations" Type="ISSAModel.Store.tbl_Mgr_SpecialOperations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_SpecialOperations">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.Store.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WeeklySecurityReport" Type="ISSAModel.Store.tbl_Mgr_WeeklySecurityReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WeeklySecurityReport">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport">
+    <End Role="tbl_Mgr_WeeklySecurityReport" Type="ISSAModel.Store.tbl_Mgr_WeeklySecurityReport" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WeeklySecurityReportComparison" Type="ISSAModel.Store.tbl_Mgr_WeeklySecurityReportComparison" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Mgr_WeeklySecurityReport">
+        <PropertyRef Name="SecurityReportID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WeeklySecurityReportComparison">
+        <PropertyRef Name="SecurityReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.Store.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WeeklySecurityReportComparison" Type="ISSAModel.Store.tbl_Mgr_WeeklySecurityReportComparison" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WeeklySecurityReportComparison">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees">
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.Store.tbl_Mgr_WorkSchedule_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Days" Type="ISSAModel.Store.tbl_Mgr_WorkSchedule_Days" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="WorkScheduleEmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Days">
+        <PropertyRef Name="WorkScheduleEmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule">
+    <End Role="tbl_Mgr_WorkSchedule" Type="ISSAModel.Store.tbl_Mgr_WorkSchedule" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.Store.tbl_Mgr_WorkSchedule_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Mgr_WorkSchedule">
+        <PropertyRef Name="WorkScheduleID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="WorkScheduleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.Store.tbl_Mgr_WorkSchedule_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.Store.tbl_Mgr_WorkSchedule_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule_Employees" Type="ISSAModel.Store.tbl_Mgr_WorkSchedule_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule_Employees">
+        <PropertyRef Name="StandyByEmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.Store.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Mgr_WorkSchedule" Type="ISSAModel.Store.tbl_Mgr_WorkSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Mgr_WorkSchedule">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType">
+    <End Role="tbl_Ref_AbsentType" Type="ISSAModel.Store.tbl_Ref_AbsentType" Multiplicity="0..1" />
+    <End Role="tbl_Op_CallIn_Absent" Type="ISSAModel.Store.tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_AbsentType">
+        <PropertyRef Name="AbsentTypeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="AbsentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor">
+    <End Role="tbl_Ref_SickLeaveFor" Type="ISSAModel.Store.tbl_Ref_SickLeaveFor" Multiplicity="0..1" />
+    <End Role="tbl_Op_CallIn_Absent" Type="ISSAModel.Store.tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_SickLeaveFor">
+        <PropertyRef Name="SickLeaveForID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="SickLeaveForID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Op_CallIn_Absent" Type="ISSAModel.Store.tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Op_CallIn_Absent" Type="ISSAModel.Store.tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="CallTakenByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Op_CallIn_Absent" Type="ISSAModel.Store.tbl_Op_CallIn_Absent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_CallIn_Absent">
+        <PropertyRef Name="ForwardedToID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.Store.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.Store.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel">
+    <End Role="tbl_Ref_ComplaintChannel" Type="ISSAModel.Store.tbl_Ref_ComplaintChannel" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.Store.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_ComplaintChannel">
+        <PropertyRef Name="ComplaintChannelID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="ComplaintChannelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1">
+    <End Role="tbl_Ref_ComplaintChannel" Type="ISSAModel.Store.tbl_Ref_ComplaintChannel" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.Store.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_ComplaintChannel">
+        <PropertyRef Name="ComplaintChannelID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="AcknowledgementID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.Store.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Complaints_tbl_Sup_Employees">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Op_Complaints" Type="ISSAModel.Store.tbl_Op_Complaints" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Complaints">
+        <PropertyRef Name="ReceivedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogs_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.Store.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.Store.tbl_Op_DailyLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogs_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.Store.tbl_Op_DailyLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogs_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.Store.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.Store.tbl_Op_DailyLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs">
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.Store.tbl_Op_DailyLogs" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogsCallLog" Type="ISSAModel.Store.tbl_Op_DailyLogsCallLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="DailyLogID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogsCallLog">
+        <PropertyRef Name="DailyLogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs">
+    <End Role="tbl_Op_DailyLogs" Type="ISSAModel.Store.tbl_Op_DailyLogs" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogsPersonWorking" Type="ISSAModel.Store.tbl_Op_DailyLogsPersonWorking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Op_DailyLogs">
+        <PropertyRef Name="DailyLogID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogsPersonWorking">
+        <PropertyRef Name="DailyLogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Op_DailyLogsPersonWorking" Type="ISSAModel.Store.tbl_Op_DailyLogsPersonWorking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_DailyLogsPersonWorking">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents">
+    <End Role="tbl_Op_Incidents" Type="ISSAModel.Store.tbl_Op_Incidents" Multiplicity="0..1" />
+    <End Role="tbl_Op_IncidentPersonsAffected" Type="ISSAModel.Store.tbl_Op_IncidentPersonsAffected" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Op_Incidents">
+        <PropertyRef Name="IncidentID" />
+      </Principal>
+      <Dependent Role="tbl_Op_IncidentPersonsAffected">
+        <PropertyRef Name="IncidentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType">
+    <End Role="tbl_Ref_IncidentPersonAffectedType" Type="ISSAModel.Store.tbl_Ref_IncidentPersonAffectedType" Multiplicity="0..1" />
+    <End Role="tbl_Op_IncidentPersonsAffected" Type="ISSAModel.Store.tbl_Op_IncidentPersonsAffected" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_IncidentPersonAffectedType">
+        <PropertyRef Name="AffectedTypeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_IncidentPersonsAffected">
+        <PropertyRef Name="AffectedTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Incidents_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.Store.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Op_Incidents" Type="ISSAModel.Store.tbl_Op_Incidents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Incidents">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes">
+    <End Role="tbl_Ref_IncidentTypes" Type="ISSAModel.Store.tbl_Ref_IncidentTypes" Multiplicity="0..1" />
+    <End Role="tbl_Op_Incidents" Type="ISSAModel.Store.tbl_Op_Incidents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_IncidentTypes">
+        <PropertyRef Name="IncidentTypeID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Incidents">
+        <PropertyRef Name="IncidentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Op_Incidents_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Op_Incidents" Type="ISSAModel.Store.tbl_Op_Incidents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Op_Incidents">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Ref_Locations_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.Store.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Ref_Locations">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Ref_Locations_tbl_Ref_Regions">
+    <End Role="tbl_Ref_Regions" Type="ISSAModel.Store.tbl_Ref_Regions" Multiplicity="0..1" />
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="tbl_Ref_Locations">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Ref_Shifts_tbl_Ref_Positions">
+    <End Role="tbl_Ref_Positions" Type="ISSAModel.Store.tbl_Ref_Positions" Multiplicity="0..1" />
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.Store.tbl_Ref_Shifts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Positions">
+        <PropertyRef Name="PositionID" />
+      </Principal>
+      <Dependent Role="tbl_Ref_Shifts">
+        <PropertyRef Name="PositionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_RolesSubLevel_tbl_RolesMasterLevel">
+    <End Role="tbl_Admin_RolesMasterLevel" Type="ISSAModel.Store.tbl_Admin_RolesMasterLevel" Multiplicity="0..1" />
+    <End Role="tbl_Admin_RolesSubLevel" Type="ISSAModel.Store.tbl_Admin_RolesSubLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Admin_RolesMasterLevel">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="tbl_Admin_RolesSubLevel">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment">
+    <End Role="tbl_Sup_DailyPostAssignment" Type="ISSAModel.Store.tbl_Sup_DailyPostAssignment" Multiplicity="0..1" />
+    <End Role="tbl_Sup_DailyMasterRoster" Type="ISSAModel.Store.tbl_Sup_DailyMasterRoster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_DailyPostAssignment">
+        <PropertyRef Name="PostAssignmentID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_DailyMasterRoster">
+        <PropertyRef Name="PostAssignmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.Store.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Sup_DailyPostAssignment" Type="ISSAModel.Store.tbl_Sup_DailyPostAssignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_DailyPostAssignment">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.Store.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Departments">
+    <End Role="tbl_Ref_Departments" Type="ISSAModel.Store.tbl_Ref_Departments" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Departments">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Positions">
+    <End Role="tbl_Ref_Positions" Type="ISSAModel.Store.tbl_Ref_Positions" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Positions">
+        <PropertyRef Name="PositionID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="PositionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_Employees_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.Store.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_Employees">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReport_tbl_Ref_Areas">
+    <End Role="tbl_Ref_Areas" Type="ISSAModel.Store.tbl_Ref_Areas" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReport" Type="ISSAModel.Store.tbl_Sup_ShiftReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Areas">
+        <PropertyRef Name="AreaID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReport">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts">
+    <End Role="tbl_Ref_Shifts" Type="ISSAModel.Store.tbl_Ref_Shifts" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReport" Type="ISSAModel.Store.tbl_Sup_ShiftReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Shifts">
+        <PropertyRef Name="ShiftID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReport">
+        <PropertyRef Name="ShiftID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees">
+    <End Role="tbl_Sup_Employees" Type="ISSAModel.Store.tbl_Sup_Employees" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReportChecks_Officers" Type="ISSAModel.Store.tbl_Sup_ShiftReportChecks_Officers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReportChecks_Officers">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks">
+    <End Role="tbl_Sup_ShiftReportChecks" Type="ISSAModel.Store.tbl_Sup_ShiftReportChecks" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReportChecks_Officers" Type="ISSAModel.Store.tbl_Sup_ShiftReportChecks_Officers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_ShiftReportChecks">
+        <PropertyRef Name="ChecksID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReportChecks_Officers">
+        <PropertyRef Name="ChecksID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations">
+    <End Role="tbl_Ref_Locations" Type="ISSAModel.Store.tbl_Ref_Locations" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReportChecks" Type="ISSAModel.Store.tbl_Sup_ShiftReportChecks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Ref_Locations">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReportChecks">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport">
+    <End Role="tbl_Sup_ShiftReport" Type="ISSAModel.Store.tbl_Sup_ShiftReport" Multiplicity="0..1" />
+    <End Role="tbl_Sup_ShiftReportChecks" Type="ISSAModel.Store.tbl_Sup_ShiftReportChecks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Sup_ShiftReport">
+        <PropertyRef Name="ShiftReportID" />
+      </Principal>
+      <Dependent Role="tbl_Sup_ShiftReportChecks">
+        <PropertyRef Name="ShiftReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_User_Role_tbl_RolesSubLevel">
+    <End Role="tbl_Admin_RolesSubLevel" Type="ISSAModel.Store.tbl_Admin_RolesSubLevel" Multiplicity="0..1" />
+    <End Role="tbl_Admin_User_Role" Type="ISSAModel.Store.tbl_Admin_User_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Admin_RolesSubLevel">
+        <PropertyRef Name="RoleSubLevelID" />
+      </Principal>
+      <Dependent Role="tbl_Admin_User_Role">
+        <PropertyRef Name="RoleSubLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_User_Role_tbl_Users">
+    <End Role="tbl_Admin_Users" Type="ISSAModel.Store.tbl_Admin_Users" Multiplicity="0..1" />
+    <End Role="tbl_Admin_User_Role" Type="ISSAModel.Store.tbl_Admin_User_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Admin_Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="tbl_Admin_User_Role">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MembershipApplication">
+    <End Role="Applications" Type="ISSAModel.Store.Applications" Multiplicity="1" />
+    <End Role="Memberships" Type="ISSAModel.Store.Memberships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Memberships">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MembershipUser">
+    <End Role="Users" Type="ISSAModel.Store.Users" Multiplicity="1" />
+    <End Role="Memberships" Type="ISSAModel.Store.Memberships" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Memberships">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RoleApplication">
+    <End Role="Applications" Type="ISSAModel.Store.Applications" Multiplicity="1" />
+    <End Role="Roles" Type="ISSAModel.Store.Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserApplication">
+    <End Role="Applications" Type="ISSAModel.Store.Applications" Multiplicity="1" />
+    <End Role="Users" Type="ISSAModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserProfile">
+    <End Role="Users" Type="ISSAModel.Store.Users" Multiplicity="1" />
+    <End Role="Profiles" Type="ISSAModel.Store.Profiles" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Profiles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsersInRoleRole">
+    <End Role="Roles" Type="ISSAModel.Store.Roles" Multiplicity="1" />
+    <End Role="UsersInRoles" Type="ISSAModel.Store.UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsersInRoleUser">
+    <End Role="Users" Type="ISSAModel.Store.Users" Multiplicity="1" />
+    <End Role="UsersInRoles" Type="ISSAModel.Store.UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Acknowledgement_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Area_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_CallForwardedTo_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_CallInOff_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReportNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="takenByID" Type="smallint" Mode="In" />
+    <Parameter Name="forwardedToID" Type="smallint" Mode="In" />
+    <Parameter Name="employeeID" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="sp_CallTakenBy_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ComplaintMode_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Complaints_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReportNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="locationID" Type="smallint" Mode="In" />
+    <Parameter Name="channelID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_ActualPersonWorking_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dlID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_Audit_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dailyLogID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_CallLog_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dailyLogID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_Doubles_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="fromTime" Type="time" Mode="In" />
+    <Parameter Name="toTime" Type="time" Mode="In" />
+    <Parameter Name="name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_Doubles_Select2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="fromTime" Type="time" Mode="In" />
+    <Parameter Name="toTime" Type="time" Mode="In" />
+    <Parameter Name="name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_Doubles_SelectAllEmployees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_DoublesWorking_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dailyLogID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_LastCheckLocationAndTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="shiftID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_LastCheckTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dailyLogID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_PersonWorking_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="locationID" Type="smallint" Mode="In" />
+    <Parameter Name="shiftID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReportNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="locationID" Type="smallint" Mode="In" />
+    <Parameter Name="shiftID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_Switches_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="locationID" Type="smallint" Mode="In" />
+    <Parameter Name="shiftID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_DailyLog_SwitchesWorking_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dlID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Department_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Employee_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="departmentID" Type="tinyint" Mode="In" />
+    <Parameter Name="positionID" Type="tinyint" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="locationID" Type="smallint" Mode="In" />
+    <Parameter Name="shiftID" Type="tinyint" Mode="In" />
+    <Parameter Name="isStandByStaff" Type="bit" Mode="In" />
+    <Parameter Name="isActive" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_Employee_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Employee_Sel4DDL_2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Employee_Sel4DDL_ByPositionID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="positionID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_Employee_SelectDayOffs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkScheduleEmployeeID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_Employee_SelectForWorkSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="shiftID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_Employee_SelectFromWorkSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="workScheduleID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Employee_UnscheduledSelectForWorkSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="wsID" Type="int" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="shiftID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_FilterHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="tinyint" Mode="In" />
+    <Parameter Name="from" Type="datetime" Mode="In" />
+    <Parameter Name="to" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_FilterUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="role" Type="varchar" Mode="In" />
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="active" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Incidents_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReportNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="locationID" Type="smallint" Mode="In" />
+    <Parameter Name="incidentTypeID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_IncidentType_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Location_Sel4DDL_ByAreaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_Operators_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="positionID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_Position_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RPT_WorkSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="year" Type="varchar" Mode="In" />
+    <Parameter Name="month" Type="varchar" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="shiftID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Shift_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Shift_Sel4DDL_ByPositionID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="positionID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_Shift_Sel4DDL_ByPositionIDAndTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="positionID" Type="tinyint" Mode="In" />
+    <Parameter Name="currentTime" Type="time" Mode="In" />
+  </Function>
+  <Function Name="sp_Shift_Sel4TAB_ByPositionID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="positionID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_ShiftReports_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReportNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="supervisorID" Type="smallint" Mode="In" />
+    <Parameter Name="shiftID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="sp_SickLeaveFor_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_SpecialOperations_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="areaID" Type="tinyint" Mode="In" />
+    <Parameter Name="locationID" Type="smallint" Mode="In" />
+    <Parameter Name="escortService" Type="bit" Mode="In" />
+    <Parameter Name="citInGT" Type="bit" Mode="In" />
+    <Parameter Name="citOutGT" Type="bit" Mode="In" />
+    <Parameter Name="extraOfficers" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_StandByEmployee_Sel4DDL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_WorkSchedule_AuditSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="wsID" Type="int" Mode="In" />
+  </Function>
+</Schema>

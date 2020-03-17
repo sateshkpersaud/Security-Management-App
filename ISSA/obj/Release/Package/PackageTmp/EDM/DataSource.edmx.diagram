@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="437c361b1136477298d707e660df64a5" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="ISSAModel.Application" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.Membership" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.Profile" Width="1.5" PointX="7.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.Role" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.sysdiagram" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Admin_RolesMasterLevel" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Admin_RolesSubLevel" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Admin_User_Role" Width="1.5" PointX="10.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Admin_Users" Width="1.5" PointX="8" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_AuditLog" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Mgr_SpecialOperations" Width="1.5" PointX="3" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Mgr_WorkSchedule" Width="1.5" PointX="9" PointY="38.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Mgr_WorkSchedule_Days" Width="1.5" PointX="13.5" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Mgr_WorkSchedule_Employees" Width="1.5" PointX="11.25" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Op_Complaints" Width="1.5" PointX="6" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Op_DailyLogs" Width="2.5" PointX="3" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Op_DailyLogsCallLog" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Op_IncidentPersonsAffected" Width="1.5" PointX="10.25" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_AbsentType" Width="1.5" PointX="14.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_Areas" Width="1.5" PointX="0.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_ComplaintChannel" Width="1.5" PointX="3.75" PointY="38.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_Departments" Width="1.5" PointX="12" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_IncidentPersonAffectedType" Width="1.5" PointX="8" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_IncidentTypes" Width="1.5" PointX="5.75" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_Locations" Width="1.5" PointX="9" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_Positions" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_Regions" Width="1.5" PointX="6.75" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_Shifts" Width="1.5" PointX="3.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_SickLeaveFor" Width="1.5" PointX="14.25" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Ref_WorkScheduleCategories" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Sup_Employees" Width="1.5" PointX="13.875" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Sup_ShiftReport" Width="1.5" PointX="6" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Sup_ShiftReportChecks" Width="1.5" PointX="14.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Sup_ShiftReportChecks_Officers" Width="1.5" PointX="16.5" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISSAModel.User" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="ISSAModel.MembershipApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.RoleApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.UserApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.MembershipUser" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_RolesSubLevel_tbl_RolesMasterLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_User_Role_tbl_RolesSubLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_User_Role_tbl_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Areas" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_SpecialOperations_tbl_Ref_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Mgr_WorkSchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_tbl_Ref_Shifts" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_DayOffs_tbl_Mgr_WorkSchedule_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Ref_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WorkSchedule_Employees_tbl_Sup_Employees1" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_Areas" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_ComplaintChannel1" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Ref_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_Complaints_tbl_Sup_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Areas" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_DailyLogs_tbl_Ref_Shifts" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_DailyLogsCallLog_tbl_Op_DailyLogs" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_IncidentPersonsAffected_tbl_Ref_IncidentPersonAffectedType" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Ref_Locations_tbl_Ref_Areas" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Areas" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_ShiftReport_tbl_Ref_Areas" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Ref_Locations_tbl_Ref_Regions" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_ShiftReportChecks_tbl_Ref_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Ref_Shifts_tbl_Ref_Positions" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Positions" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_Employees_tbl_Ref_Shifts" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_ShiftReport_tbl_Ref_Shifts" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_ShiftReportChecks_tbl_Sup_ShiftReport" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_ShiftReportChecks_Officers_tbl_Sup_ShiftReportChecks" ManuallyRouted="false" />
+        <AssociationConnector Association="ISSAModel.UsersInRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Sup_DailyMasterRoster" Width="1.5" PointX="10.915505250410877" PointY="17.746314861693566" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Sup_DailyPostAssignment" Width="1.5" PointX="5.8075210460496693" PointY="8.0183828510429631" />
+        <EntityTypeShape EntityType="ISSAModel.temptable" Width="1.5" PointX="6.7478303922097345" PointY="11.996411522848723" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_DailyPostAssignment_tbl_Ref_Shifts" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Sup_DailyMasterRoster_tbl_Sup_DailyPostAssignment" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Op_DailyLogsPersonWorking" Width="1.5" PointX="9.02306906367795" PointY="23.94206440073534" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_DailyLogsPersonWorking_tbl_Op_DailyLogs" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_DailyLogsPersonWorking_tbl_Sup_Employees" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Mgr_WeeklySecurityReport" Width="2.25" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WeeklySecurityReport_tbl_Ref_Areas" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Mgr_WeeklySecurityReportComparison" Width="1.5" PointX="6.6040731475707481" PointY="5.3238427961821868" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Mgr_WeeklySecurityReport" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Mgr_WeeklySecurityReportComparison_tbl_Ref_Shifts" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Mgr_DateTimeGrant" Width="1.5" PointX="3.8747145234955078" PointY="10.284329657575269" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Reports" Width="1.5" PointX="8.3740544395400462" PointY="17.078406297172609" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_ReportsRole" Width="1.5" PointX="0.59514527236816717" PointY="21.347097093866719" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Op_Incidents" Width="1.5" PointX="11.406051663405286" PointY="12.930845102728737" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_IncidentPersonsAffected_tbl_Op_Incidents" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_Areas" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_IncidentTypes" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_Incidents_tbl_Ref_Locations" />
+        <EntityTypeShape EntityType="ISSAModel.tbl_Op_CallIn_Absent" Width="1.5" PointX="6.8162463693023874" PointY="14.332482925771028" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Ref_AbsentType" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Ref_SickLeaveFor" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees1" />
+        <AssociationConnector Association="ISSAModel.FK_tbl_Op_CallIn_Absent_tbl_Sup_Employees2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
